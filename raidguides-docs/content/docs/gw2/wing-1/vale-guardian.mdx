@@ -1,0 +1,145 @@
+---
+title: Vale Guardian
+description: Guia do primeiro encounter do Spirit Vale.
+contentStatus: legacy
+editorialStatus: reviewed
+lastReviewed: 2026-07-20
+mechanicsStatus: needs-review
+buildsStatus: outdated
+phaseCount: 3
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { GuideTerm } from '@/components/guide-term';
+
+## Estatísticas
+
+| Vida | Breakbar | Enraged Timer |
+| --- | --- | --- |
+| 22 Milhões | Defiance Bar: 2000 | 8 minutos |
+
+## Resumo do encontro
+
+<Callout type="info" title="O Vale Guardian tem três fases">
+- **Fase 1:** dos 100% aos 66% de vida.
+- **Primeira split phase:** começa aos 66%.
+- **Fase 2:** dos 66% aos 33% de vida.
+- **Segunda split phase:** começa aos 33% e repete a estrutura da primeira.
+- **Fase 3:** dos 33% até ao fim do encontro.
+</Callout>
+
+## Pré-evento
+
+Assim que entram no **Spirit Vale**, encontram três *guardians* de cores diferentes. A ordem em que aparecem é aleatória, e cada um apresenta mecânicas que serão usadas no Vale Guardian. Existe um círculo grande à volta de cada *guardian*. Ao entrarem nesse círculo, vão dar *aggro* ao *guardian* e, enquanto permanecerem lá dentro, sofrem uma pequena quantidade de dano ao longo do tempo e veem o vosso *movement speed* reduzido.
+
+## Red Guardian
+
+O Red Guardian tem uma toughness extremamente elevada, pelo que todo o dano baseado em power se torna ineficaz. Por este motivo, o squad tem de ter dois a três jogadores como Condi DPS (CDPS). O Red Guardian introduz também a mecânica das [seekers](#seeker).
+
+## Seeker
+
+As Seekers são *orbs* vermelhas que surgem a cada 15 segundos e se movem em direção aos jogadores. Podem causar bastante dano ao longo do tempo, mas dão despawn após 20 segundos e são suscetíveis a CC (Immobilize, Stun, Pull, etc.). Cada Seeker tem um pequeno *AoE* à sua volta que causa dano elevado. Devem, por isso, ser imobilizadas ou afastadas do grupo. Os jogadores devem também tentar evitá-las com *sidestep* e não entrar no *AoE*. Tendo em conta os 20 segundos de vida das Seekers, não se devem gastar todas as formas de CC na mesma *wave*.
+
+<video src="/media/gw2/wing-1/vale-guardian/ElectricElectricEmu-mobile.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Green Guardian
+
+O Green Guardian apenas adiciona uma mecânica, o **Unstable Magic Spike**.
+
+**Unstable Magic Spike:** A cada 10 segundos, aparecem pequenos círculos azuis sob vários jogadores. Após cerca de 2,5 a 3 segundos, os círculos rebentam, causam dano moderado e teleportam quem estiver dentro do *AoE* para um local aleatório. Permanecer sobre o *AoE* azul deixa as bordas do ecrã amarelas como aviso. O teleporte pode ser bloqueado (Distort, Block, etc.), evadido (*dodge*) ou evitado (*sidestep*). Como há pelo menos 2,5 segundos para reagir, o *sidestep* é a opção mais eficiente.
+
+<video src="/media/gw2/wing-1/vale-guardian/Unstable-Magic.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Blue Guardian
+
+O Blue Guardian começa com um boon único (Blue Pylon Power). Este boon deixa-o imune a qualquer tipo de dano ou condition, sendo necessário removê-lo (*boon strip*) com, por exemplo, a AA *chain* do Chrono ou Banish Enchantment (Mallyx) do Renegade. Após 10 segundos, volta a ganhar o boon e Protection.
+
+O Blue Guardian adiciona uma nova mecânica, a **Distributed Magic**.
+
+**Distributed Magic:** A cada 15 segundos, um círculo verde vai dar spawn num local aleatório. O círculo reduz de tamanho durante 5 segundos até ficar vazio, altura em que causa a todos os jogadores dano massivo que ignora Protection (80% do HP máximo). Se quatro jogadores estiverem dentro do círculo (três durante a *split phase* do Vale Guardian), o dano é negado. Jogadores downed não contam para este efeito.
+
+<video src="/media/gw2/wing-1/vale-guardian/Disturbed-Magic.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Combate: Vale Guardian
+
+### Preparação e posicionamento
+
+Assim que os três guardians iniciais forem mortos, o Vale Guardian (boss) vai dar *spawn* no centro da plataforma. Este boss tem toughness baixa, pelo que Power DPS é recomendado. No entanto, devido ao Red Guardian, é necessário manter dois a três CDPS. Quando se aproximam do boss, aparece uma parede à volta da plataforma que mata instantaneamente quem estiver do lado de fora. O jogador com mais toughness do squad fica com o aggro do boss e, consequentemente, assume a função de tank. É recomendado tankar o boss do lado oposto ao grupo, para que apenas o tank fique à sua frente e os restantes jogadores evitem o dano dos AA. Ao longo do encontro, as mecânicas usadas pelos três guardians anteriores voltam a aparecer, incluindo a **Distributed Magic**.
+
+Há duas estratégias para lidar com a **Distributed Magic** (círculos verdes):
+
+<Callout type="info">
+A primeira envolve designar um mínimo de quatro jogadores (três durante as *split phases*) para correrem em direção ao círculo verde e permanecerem lá, de forma a negar o dano. As *ranged classes* são prioritárias.
+
+A segunda envolve ignorar o círculo verde. Assim que o grupo sofrer o dano massivo, os healers tentam dar *burst heal*. Podem também usar barrier (por exemplo, Scourge) para minimizar a perda de HP. Esta estratégia coloca maior pressão nos healers. Ser apanhado pelos círculos azuis (teleporte) quando o círculo verde "explode" significa ficar afastado do grupo e sem *heals*, o que pode resultar num *wipe*.
+</Callout>
+
+## Fase 1
+
+<GuideTerm href="#seeker" tooltipId="seeker-phase-1-tooltip" description="Orbs vermelhas que perseguem os jogadores e causam dano elevado na área próxima. Devem ser controladas ou afastadas do grupo.">Seekers</GuideTerm> — Três seekers vão dar spawn a cada 20 segundos.
+
+**Distributed Magic** - Os círculos verdes precisam de quatro jogadores para o dano ser negado.
+
+A arena está dividida em três setores, com um pilar no centro de cada um. O círculo verde vai dar spawn no setor onde o boss estiver. Por exemplo, se estiver na parte vermelha, o círculo verde vai dar spawn nessa área.
+
+Se estiverem a fazer os círculos verdes, é recomendado tankar junto a um pilar, normalmente o azul, para garantir que o círculo dá spawn dentro da pequena área azul.
+
+As seekers dão spawn sempre a meio de cada setor, o que significa que pelo menos uma delas se aproxima rapidamente do grupo e as restantes duas devem chegar juntas.
+
+Como anteriormente, as Seekers precisam de ser afastadas ou impedidas de chegar perto do grupo.
+
+Se estiverem a ignorar os círculos verdes, é recomendado tankar no centro da arena ou entre dois setores (regra geral, o azul e o vermelho). Tankar no meio é mais rápido, mas também mais arriscado, sendo a melhor opção para grupos com bom DPS. Tankar entre setores tem a vantagem de permitir lidar apenas com duas seekers, visto que a última não chega a tempo.
+
+A imagem abaixo mostra os setores, assim como os locais onde podem tankar: 1 (a meio de um setor, geralmente o setor azul), 2 (entre dois setores) e 3 (no centro da arena).
+
+![Setores da plataforma do Vale Guardian](/media/gw2/wing-1/vale-guardian/Plataforma.png)
+
+### Primeira split phase (66%)
+
+Quando o boss chegar a 66% de vida, fica invulnerável e corre para o centro da plataforma, dando início à *split phase*. Os três *guardians* que mataram no início reaparecem com as mesmas mecânicas, um em cada setor, e têm de ser mortos para o boss regressar.
+
+Quando dão *spawn*, cada jogador fica com um símbolo sobre a cabeça correspondente ao setor em que se encontra. É importante estar no setor certo nesse momento, pois os jogadores sofrem dano adicional caso estejam no setor errado. Uma estratégia comum é enviar os CDPS para o setor vermelho, um healer para o setor verde e todos os outros jogadores para o setor azul.
+
+<Callout type="warn">
+É necessário ter alguém com boonstrip no setor azul (por exemplo, o 3.º AA da chain da sword do Chrono ou o skill Banish Enchantment na stance de Legendary Demon do Revenant). Os *guardians* dão aggro por proximidade. Por isso, o jogador no verde deve puxar o *green guardian* para junto do *blue guardian* e dos restantes DPS. Quando chegam a 1%, surge novamente uma breakbar; em seguida, os guardians e o símbolo sobre a cabeça desaparecem.
+</Callout>
+
+<Callout type="info">
+Quando matam o *guardian*, o símbolo desaparece. No entanto, continuam a sofrer bastante dano caso se aproximem de outro *guardian* sem terem o símbolo da respetiva cor.
+</Callout>
+
+## Fase 2
+
+Assim que a *split phase* termina, o boss continua como anteriormente, mas com duas novas mecânicas.
+
+Quando as primeiras seekers dão *spawn*, o setor verde acende-se e causa dano por pulsos a quem estiver sobre ele. O setor ativo muda a cada 20 segundos, no sentido dos ponteiros do relógio (*clockwise*). Se estiverem a fazer os verdes, é essencial que os círculos não deem *spawn* no setor ativo. Por isso, o tank tem de mover o VG no sentido *clockwise*, de setor em setor, a cada 20 segundos. Podem manter um setor de distância para terem maior segurança. Se estiverem a ignorar os círculos verdes, precisam apenas de dar *sidestep* quando o setor onde estão ficar ativo.
+
+A segunda nova mecânica chama-se **"Magic Storm"** (Defiance bar: 2000).
+
+O VG levanta um dos braços e ganha uma breakbar enquanto dispara *orbs* para o ar, que causam dano até a barra ser partida. Não há *respawn* de seekers, círculos verdes ou azuis enquanto esta fase de CC estiver ativa.
+
+O ataque acaba automaticamente assim que o próximo setor for ativado.
+
+### Segunda split phase (33%)
+
+A segunda *split phase* ocorre aos 33% e é idêntica à anterior.
+
+![Breakbar do Vale Guardian durante a Magic Storm](/media/gw2/wing-1/vale-guardian/Defiance-Bar.jpg)
+
+## Fase 3
+
+A fase final não introduz novas mecânicas, mas apresenta algumas alterações:
+
+<GuideTerm href="#seeker" tooltipId="seeker-phase-3-tooltip" description="Orbs vermelhas que perseguem os jogadores e causam dano elevado na área próxima. Devem ser controladas ou afastadas do grupo.">Seekers</GuideTerm> — Uma seeker adicional dá spawn no centro da plataforma.
+
+**Unstable Magic Spike** (círculos azuis) - Dá spawn sob todos os jogadores, e não apenas sob os que estão mais próximos do boss.
+
+<Callout type="warn">
+Passam a estar ativos dois setores em vez de apenas um, começando pelos setores verde e azul. A rotação continua a decorrer no sentido *clockwise*, pelo que desta vez existe apenas um setor seguro. A troca ocorre a cada 17 segundos, em vez dos 20 segundos anteriores.
+</Callout>
+
+Para os grupos que estejam a fazer os verdes, é importante mover o boss o mais rapidamente possível, para garantir que o círculo não dá *spawn* num setor ativo. Caso contrário, pode provocar um *wipe* do squad ou mortes desnecessárias.
+
+A breakbar (Magic Bullet) tem de ser partida rapidamente para evitar atrasos no movimento do boss.
+
+![Dois setores ligados na fase 3](/media/gw2/wing-1/vale-guardian/2-Sectores-VG.jpg)

@@ -1,0 +1,182 @@
+---
+title: Gorseval
+description: Guia do terceiro encounter do Spirit Vale.
+contentStatus: legacy
+editorialStatus: reviewed
+lastReviewed: '2026-07-20'
+mechanicsStatus: needs-review
+buildsStatus: outdated
+phaseCount: 3
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+## Estatísticas
+
+| Vida | Breakbar | Tempo para Enrage |
+| --- | --- | --- |
+| 21.6 Milhões | Defiance Bar: 4500 | 7 minutos |
+
+<Callout type="info" title="O Gorseval tem três fases">
+- **Fase 1:** termina aos 66% de vida.
+- **Primeira split phase:** ocorre aos 66%.
+- **Fase 2:** termina aos 33% de vida.
+- **Segunda split phase:** ocorre aos 33%.
+- **Fase 3:** decorre até ao fim do encontro.
+</Callout>
+
+Tal como o Vale Guardian, o Gorseval foca o jogador com mais *toughness* no squad. Esse jogador deve assumir a função de tank, posicionar o boss no centro da arena e virá-lo para o lado oposto ao resto do grupo.
+
+<Callout type="warn" title="Posicionamento">
+Apenas o tank deve permanecer à frente do boss. Todos os outros jogadores devem posicionar-se atrás do Gorseval.
+</Callout>
+
+## Os ataques do Gorse
+
+### Wicked Swipe
+
+Um ataque frontal fraco que, com o posicionamento correto, deve atingir apenas o tank.
+
+<video src="/media/gw2/wing-1/gorseval/Wicked-Swipe.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Spectral Impact
+
+O Gorseval esmurra o chão e aplica *knockback* aos jogadores à sua volta. O ataque pode ser bloqueado ou evitado com *dodge*.
+
+<Callout type="warn">
+Designem alguém para fornecer Aegis ou Stability ao grupo. Desta forma, podem ignorar o *knockback* e continuar a causar dano.
+</Callout>
+
+Os Support Chronomancers podem alinhar os *signets* para partilhar Aegis com o grupo através da *trait* em Inspiration. Um Firebrand pode fornecê-la com a *healing skill* da mantra, ou usar a *utility skill* **Stand Your Ground** para dar Stability. Dragonhunters podem usar o F3 para proteger o squad, enquanto Renegades podem recorrer ao Legendary Jalis para fornecer Stability.
+
+<video src="/media/gw2/wing-1/gorseval/spectral-Impact.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Ghastly Rampage
+
+O Gorseval teleporta-se para o centro da arena e começa a esmurrar repetidamente o chão. Nesse momento, ganha uma *breakbar*. Enquanto esta não for partida, os jogadores recebem dano contínuo, provocado por um *debuff* semelhante a Retaliation. É importante partir a barra.
+
+Classes como o Guardian podem usar a *healing skill* **Litany of Wrath** nesta fase para compensar o dano recebido e manter o HP e o DPS.
+
+Ao mesmo tempo, uma espécie de gosma preta explode a cada poucos segundos, causando dano e aplicando 25 *stacks* de Vulnerability a quem for atingido.
+
+**Defiance Bar:** 4500
+
+<video src="/media/gw2/wing-1/gorseval/Ghastly-Rampage.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Convene
+
+O Gorseval levanta as mãos e invoca *ghosts*. Estes inimigos podem aplicar *knockback*, causar dano significativo e curar o boss, pelo que devem ser eliminados.
+
+Normalmente, uma classe fica responsável por aplicar *pull* no fim da *breakbar*, como um Chronomancer através da habilidade 4 do focus.
+
+<video src="/media/gw2/wing-1/gorseval/Convene.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### World Eater
+
+O Gorseval levanta os braços e começa a formar um AoE que ocupa toda a arena. Quando estiver completamente carregado, explode e mata instantaneamente qualquer jogador que permaneça na plataforma. Se ainda existirem *ghosts* do **Convene**, o boss consome-os e ganha um *buff* de 10% de dano.
+
+<video src="/media/gw2/wing-1/gorseval/World-Eater.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Fase 1
+
+A sequência de ataques da primeira fase é a seguinte:
+
+**Wicked Swipe → Spectral Impact → Wicked Swipe → Ghastly Rampage → Convene → Wicked Swipe → Spectral Impact → Wicked Swipe → Wicked Swipe → Wicked Swipe → Spectral Impact → World Eater.**
+
+Em algumas ocasiões, o Gorseval pode usar um Wicked Swipe antes do Ghastly Rampage ou começar com Spectral Impact.
+
+Para evitar um *wipe* durante o World Eater, o grupo deve sair da arena enquanto o boss executa a habilidade. Para isso, é necessário destruir uma das paredes que bloqueiam o acesso aos *updrafts*.
+
+### Ghastly Rampage: fase de CC
+
+Existem quatro *updrafts* à volta da arena, cada um protegido por uma barreira semelhante às do Spirit Woods. Enquanto destrói a parede, o grupo deve continuar a atingir o boss para manter o DPS. Para facilitar este processo, o tank deve aproximar o Gorseval da barreira antes do início do ataque.
+
+Quando o World Eater começar a expandir-se, continuem a causar dano enquanto houver tempo. Saltem para o *updraft* antes de o AoE terminar para evitar a morte instantânea. Cada *updraft* pode ser usado apenas uma vez. Aos 66% de vida, o Gorseval entra na primeira *split phase*.
+
+<Callout type="info">
+O Gorseval entra em *split phase* aos 66% e aos 33%. O DPS do squad determina se é possível avançar para cada transição sem recorrer ao World Eater.
+
+Se o DPS não for suficiente, será provavelmente necessário usar os *updrafts* para sobreviver ao World Eater.
+
+Também é possível atrasar ligeiramente a quebra da *breakbar*. Se o healer conseguir sustentar o grupo, podem manter a barra ativa durante algum tempo enquanto continuam a causar dano. O objetivo é retirar vida suficiente ao boss para alcançar a transição antes do World Eater.
+</Callout>
+
+Se o grupo optar pela estratégia **Slow CC**, é importante reconhecer os cinco padrões da gosma preta:
+
+- **Melee:** um anel à volta do Gorseval, sem cobrir a área diretamente sob o boss.
+- **Max Melee:** um pequeno círculo sob o boss.
+- **Range:** um círculo médio sob o boss.
+- **Max Range:** um círculo grande sob o boss.
+- **Full:** um círculo que cobre toda a arena.
+
+É recomendável partir a *breakbar* antes do padrão **Full**.
+
+O padrão na fase 1 é o seguinte: **Melee → Melee → Max Melee → Range → Max Melee → Full.**
+
+<video src="/media/gw2/wing-1/gorseval/Gosma.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Primeira split phase (66%)
+
+No início da *split phase*, o Gorseval ganha um escudo e fica imune a dano. Aparecem quatro Charged Souls que avançam lentamente na sua direção. Se uma delas alcançar o boss, o Gorseval inicia imediatamente o World Eater, sem possibilidade de fuga.
+
+As Souls são imunes a *hard CC*, mas podem ser atrasadas com *soft CC*, como Chill, Cripple ou Immobilize. O objetivo é eliminar as quatro antes de chegarem ao Gorseval. Uma estratégia comum consiste em usar **Entangle**, do Ranger, para atrasar pelo menos três Souls, dependendo do posicionamento e da execução do squad.
+
+## Fase 2
+
+Quando todas as Souls morrerem, o Gorseval volta a ficar vulnerável e o combate prossegue.
+
+O padrão de ataques desta fase é o seguinte:
+
+**Wicked Swipe → Spectral Impact → Wicked Swipe → Wicked Swipe → Wicked Swipe → Rampage → Convene → Wicked Swipe → Spectral Impact → Wicked Swipe → Wicked Swipe → Wicked Swipe → World Eater.**
+
+Em ocasiões raras, pode ocorrer um segundo Spectral Impact antes do Ghastly Rampage.
+
+A segunda fase é semelhante à primeira, mas acrescenta a mecânica **Spectral Darkness**.
+
+### Spectral Darkness
+
+A cada cinco segundos, aparecem *orbs* azuis rodeadas por um AoE que aumenta lentamente de tamanho. Se um jogador tocar no AoE, recebe 10 *stacks* do *debuff* Spectral Darkness. Cada *stack* aumenta o dano recebido e reduz o dano causado em 10%.
+
+Ao destruir uma *orb* azul, surgem esferas amarelas ou laranja que removem o *debuff*. Apanhem as necessárias até o efeito desaparecer. Normalmente, cada esfera remove cinco *stacks*, pelo que deverão ser suficientes duas.
+
+Para confirmar se o *debuff* foi removido, observem o efeito acima da personagem: quando a figura semelhante a um *ghost* branco e roxo desaparecer, já não têm Spectral Darkness.
+
+<Callout type="info">
+Destruam as *orbs* que aparecem perto do boss para evitar uma perda desnecessária de DPS.
+</Callout>
+
+<video src="/media/gw2/wing-1/gorseval/Orbs.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Se o grupo escolher a estratégia **Slow CC**, o padrão da gosma preta nesta fase é:
+
+**Melee → Max Melee → Max Melee → Range → Max Range → Full**
+
+### Segunda split phase (33%)
+
+Aos 33%, o Gorseval entra novamente numa *split phase* idêntica à anterior. Como a arena poderá estar coberta por *orbs* azuis de Spectral Darkness, esta transição é uma boa oportunidade para as eliminar sem reduzir o DPS no boss. Para isso, podem recorrer a classes com DPS à distância.
+
+## Fase 3
+
+A fase começa assim que as quatro Souls forem eliminadas. O padrão de ataques é:
+
+**Wicked Swipe → Spectral Impact → Wicked Swipe → Wicked Swipe → Ghastly Rampage → Convene → Wicked Swipe → Spectral Impact → Wicked Swipe → World Eater.**
+
+O padrão de ataques após o Ghastly Rampage pode variar.
+
+Na última fase, é adicionada a mecânica **Ghastly Prison**.
+
+### Ghastly Prison
+
+Cerca de cinco segundos após o Spectral Impact, aparecem AoEs laranja sob os jogadores e começam rapidamente a preencher-se. Surge também no ecrã a mensagem **“Ghostly Traps Materialize at your feet”**.
+
+Este ataque não pode ser bloqueado nem evitado com *dodge*. Quem permanecer sobre um AoE fica preso numa espécie de *orb* ou *egg*. O jogador pode usar o ataque automático dessa forma para se libertar; em alternativa, o squad pode destruir o *egg* e libertá-lo.
+
+<Callout type="info">
+Esta mecânica ocorre apenas na terceira fase. Reconheçam os AoEs e façam *sidestep* para uma zona livre. O ataque repete-se depois de a *breakbar* ser partida, pelo que terão de voltar a desviar-se.
+</Callout>
+
+<video src="/media/gw2/wing-1/gorseval/Eggs.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Se o squad optar pela estratégia **Slow CC**, o padrão da gosma nesta fase é:
+
+**Max Melee → Ranged → Melee → Melee → Melee → Full**

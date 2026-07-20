@@ -1,0 +1,16 @@
+{
+  "title": "Guild Wars 2",
+  "description": "Raid guides for Guild Wars 2",
+  "icon": "GuildWars2",
+  "root": true,
+  "pages": [
+    "---Introdução---",
+    "index",
+    "...introduction",
+    "---Wings---",
+    "wing-1",
+    "wing-2",
+    "wing-3",
+    "wing-4"
+  ]
+}

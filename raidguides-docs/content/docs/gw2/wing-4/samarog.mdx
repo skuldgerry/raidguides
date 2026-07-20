@@ -1,0 +1,185 @@
+---
+title: Samarog
+description: Guia do terceiro encontro de Bastion of the Penitent.
+contentStatus: legacy
+editorialStatus: reviewed
+lastReviewed: 2026-07-20
+mechanicsStatus: needs-review
+buildsStatus: outdated
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { GuideTerm } from '@/components/guide-term';
+
+## Estatísticas
+
+| Vida | Breakbar | Tempo até ao enrage |
+| --- | --- | --- |
+| 29,5 milhões | Defiance Bar: 4500 | 11 minutos |
+
+## Pré-evento
+
+Depois de derrotarem o Mursaat Overseer, o **Eye of Janthir** desaparece novamente. Para prosseguirem, têm de desbloquear uma porta. Ao aproximarem-se, recebem **Gift of True Sight**, assinalado por um pequeno círculo sobre a personagem, que permite encontrar as quatro chaves escondidas nos *rubbles*.
+
+Se tiverem um Thief no squad, essa pessoa consegue abrir a porta sem terem de apanhar as quatro chaves.
+
+**Localização das chaves:**
+
+![Localização das quatro chaves no pré-evento do Samarog](/media/gw2/wing-4/samarog/Chaves.png)
+
+Depois de desbloquearem a porta, encontram o Samarog numa arena rodeada de *spears*. Ao aproximarem-se do boss, surgem também *spears* na zona por onde iniciam o encontro.
+
+<Callout type="warn" title="Evitem as spears">
+  Várias habilidades do Samarog causam *knockback* ou *launch*. Ser projetado contra uma das *spears* que rodeiam a arena resulta em morte imediata.
+</Callout>
+
+O jogador que ativa o boss torna-se o primeiro *tank*, normalmente por ser o primeiro a avançar. A pessoa fixada fica com um símbolo roxo sobre a personagem.
+
+![Arena do Samarog rodeada de spears](/media/gw2/wing-4/samarog/Spears-Plataforma.jpg)
+
+## Visão geral
+
+<Callout type="info" title="Prioridades do encontro">
+- O jogador com **Fixation** posiciona-se no lado oposto ao grupo.
+- Partam rapidamente a barra do <GuideTerm href="#brutalize--defiance-bar-4500" tooltipId="samarog-brutalize-tooltip" description="Ataque periódico que prende e causa dano ao alvo até o grupo partir a breakbar do Samarog.">Brutalize</GuideTerm>.
+- Saltem ou evitem as <GuideTerm href="#claw--impaling-stab--shockwave" tooltipId="samarog-shockwave-tooltip" description="Onda de choque após o Impaling Stab que projeta os jogadores; pode ser evitada com salto ou dodge.">Shockwaves</GuideTerm>.
+- Nas fases de *adds*, levem a explosão do Rigom até ao Samarog para remover o *shield* do Guldhem.
+</Callout>
+
+## Fixation e *tank*
+
+O *aggro* funciona por proximidade. O primeiro alvo é o jogador que inicia o encontro, aproximando-se ou atacando. Depois de partirem a barra de CC, o *aggro* passa para o jogador mais afastado do boss. O mesmo acontece no início das fases após os 66% e 33%.
+
+O jogador com **Fixation** tem um cristal roxo sobre a personagem. Normalmente, esta função é atribuída a uma classe de suporte. Se o jogador fixado entrar em *downstate*, o *aggro* passa para outra pessoa.
+
+O jogador fixado deve permanecer no lado oposto ao resto do grupo. Pode saltar as **Shockwaves** e evitar o **Prisoner Sweep** fazendo *dodge* para dentro da *hitbox*, regressando à posição inicial quando o ataque terminar. Durante o **Prisoner Sweep**, o Samarog tende a virar-se para o lado oposto ao *tank*.
+
+<video src="/media/gw2/wing-4/samarog/Fixated-SAM.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Spears of Aggression e Revulsion
+
+Ao longo do encontro, surgem outras *spears* na arena e reduzem progressivamente o espaço disponível. Não causam muito dano, mas tocar-lhes ou ser projetado contra elas aplica Taunt, Fear ou Daze.
+
+Aparece uma *spear* a cada 20 segundos. Podem removê-la partindo a *breakbar* ou esgotando a barra de vida.
+
+Se o **Brutalize** estiver prestes a começar e o jogador com **Fixation** estiver dentro do AoE das *spears*, morre imediatamente.
+
+Uma skill bastante útil para lidar com as spears é o "Entangle" (Ranger) — podem usá-lo entre fases para aumentar o vosso espaço.
+
+Haverá uma mecânica que causa o desaparecimento de todas as spears na arena, mas raramente acontece.
+
+![Padrão de spears na arena](/media/gw2/wing-4/samarog/Spears.png)
+
+## Brutalize — Defiance bar: 4500
+
+Em cada intervalo de 10% da vida, o Samarog usa esta habilidade. Devido ao tamanho da Defiance bar (4500), todo o grupo deve contribuir com CC.
+
+A janela para partirem a breakbar é de 15 segundos. Caso não a partam durante esse tempo, o Samarog interrompe o ataque — no entanto lembrem-se que é preciso garantir heals suficientes a quem sofre o Brutalize; não é recomendado deixá-lo continuar.
+
+Durante esta habilidade, o jogador que tinha o *aggro* não pode usar habilidades e sofre dano contínuo até a *breakbar* ser partida. Se chegar a zero de vida, morre sem entrar em *downstate*. Apesar de não poder agir, continua a receber cura; se o CC for lento, os *healers* devem mantê-lo vivo.
+
+O Samarog durante este ataque recebe um buff (Fanatical Resilience) que lhe atribui -100% damage reduction, impossibilitando-o de levar qualquer dano.
+
+<Callout type="info" title="Guardem o burst">
+  Como o Samarog não recebe dano durante este ataque, guardem as habilidades de DPS e *burst* para depois do CC.
+</Callout>
+
+Quando a breakbar for partida, será selecionado um novo Fixation, e será aquele que estava mais longe quando a defiance bar partiu. A pessoa que tem o Fixation na última breakbar (10%) normalmente escreve "/gg" para tornar a kill mais rápida, dando skip à mecânica.
+
+<video src="/media/gw2/wing-4/samarog/Brutalize.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Claw → Impaling Stab → Shockwave
+
+O Samarog ataca duas vezes com as garras dianteiras (**Claw**) antes de cravar as duas *spears* no chão (**Impaling Stab**). O impacto provoca uma **Shockwave** que projeta quem não a evitar, potencialmente contra as *spears* que rodeiam a arena.
+
+Os ataques da Claw e da Shockwave efetuam um dano elevado; já o Impaling Stab efetua um dano massivo. É tão importante evitar o dano do Impaling Stab como o dano da Shockwave.
+
+Para evitar o dano e a projeção da **Shockwave**, saltem sobre a onda ou façam *dodge*, de preferência na sua direção.
+
+O encontro não tem muita pressão de cura, exceto quando os jogadores falham as mecânicas. Evitem dano permanecendo nas costas do boss e saltando todas as **Shockwaves**.
+
+Esta shockwave pode ser evitada através de dodge/salto, mas não pode ser bloqueada. A projeção pode ser evitada caso tenham Stability — no entanto, como a mecânica é básica e pode ser evitada apenas com um salto, não devem forçar o squad a isso.
+
+O Samarog usa esta sequência de habilidades duas vezes, seguida do Prisoner Sweep.
+
+<video src="/media/gw2/wing-4/samarog/Shockwave.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Prisoner Sweep
+
+Este ataque é dirigido a um jogador aleatório. Como todos, exceto o *tank*, devem estar nas costas do boss, será provavelmente lançado para o lado oposto ao *tank*.
+
+Durante este ataque ele estica os braços em conjunto com as spears e efetua um swipe da direita para a esquerda e da esquerda para a direita, afetando até 180º na direção que está virado. Caso não evitem este ataque, serão projetados.
+
+Evitem-no passando rapidamente para as costas do boss. Depois dos dois movimentos com as *spears*, o Samarog volta-se novamente para o *tank*. O ataque pode ser bloqueado ou evitado com *dodge*; *Stability* impede a projeção.
+
+<Callout type="warn" title="Efeitos adicionais">
+  O ataque torna-se mais perigoso ao longo do encontro: abaixo dos 66% passa a aplicar Cripple e, abaixo dos 33%, aplica também Stun aos restantes jogadores.
+</Callout>
+
+<video src="/media/gw2/wing-4/samarog/Prisoner-Sweep.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Fases de adds — 66% e 33%
+
+Aos 66% e 33%, o Samarog torna-se invulnerável e desloca-se para uma pequena área rodeada de *spears*. Durante o movimento, executa uma espécie de *charge*; não permaneçam à sua frente, pois serão projetados.
+
+Nestas duas fases, têm de derrotar duas *adds* para trazer o Samarog de volta à arena. O *aggro* de cada *add* é assinalado por um cristal amarelo/laranja e por um efeito na barra de *buffs*.
+
+### Guldhem e Rigom
+
+- Enquanto o Guldhem e o Rigom permanecerem juntos, irão ganhar stacks de buffs que aumentam o dano do Guldhem e o HP do Rigom.
+- Enquanto o shield estiver ativo, o Guldhem direciona todos os ataques e as conditions para o Rigom.
+- Quando o Rigom morre, ele explode e regenera o HP todo. Se essa explosão acertar no Samarog, o Guldhem perde o shield e torna-se vulnerável.
+- A cada intervalo de 33% o Rigom ativa o shield do Guldhem — é necessário repetir o processo.
+- Quando ambos morrem, o Samarog volta a tornar-se vulnerável e retorna à arena.
+- O aggro de ambos é trocado a cada 20 segundos.
+
+- **Rigom:** o jogador mais a sul fica com o *aggro*.
+- **Guldhem:** o jogador mais a norte fica com o *aggro* e com o AoE causado pelo Guldhem.
+
+<video src="/media/gw2/wing-4/samarog/Guldem-and-Rigom-1.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+O objetivo é matar o Guldhem e depois o Rigom. Só conseguem causar dano ao Guldhem depois de removerem o *shield*. Para o fazer, a explosão do Rigom tem de atingir o Samarog; mantenham o Rigom perto do boss enquanto atacam o Guldhem.
+
+O Druid deve dropar o Staff e trazer um Longbow, o que ajuda imenso a controlar o Rigom — pode optar também por levar Glyph of Tides, assim como Entangle (podem usá-lo junto ao Rigom antes de empurrar) para imobilizar o Rigom quando este se encontrar perto do Samarog. Classes com push/pull skills devem ajudar; uma skill bastante utilizada é o 4 do focus do Mesmer.
+
+O Guldhem irá ter shield aos 100%, 66% e 33%. Devem ter cuidado com a skill "Anguished Bolt" do Guldhem — é lançado um projétil, visível através de um AoE, que dá um dano elevado e stun.
+
+Depois de removerem o *shield* dos 33%, podem trazer o Rigom para junto do grupo e matar ambos. Assim que os dois forem derrotados, o Samarog regressa à arena.
+
+<video src="/media/gw2/wing-4/samarog/Guldem-and-Rigom-2.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Inevitable Betrayal
+
+Esta mecânica é acrescentada às restantes abaixo dos 66%.
+
+Irá aparecer um aviso e serão escolhidas duas pessoas. Essas duas pessoas irão ter um AoE verde pequeno com um efeito decrescente, sinalizando o tempo que têm para se aproximarem uma da outra até rebentar. Uma das pessoas escolhidas irá ainda ter outro AoE grande à sua volta. Caso ambos os jogadores não se juntem, o AoE rebenta e muito provavelmente o jogador que o tinha irá down, levando cerca de 15k de dano.
+
+O jogador com o AoE grande deve afastar-se do grupo sem se movimentar demasiado. Quem não foi selecionado deve sair do AoE grande; permanecer no interior resulta em *downstate*.
+
+Esta mecânica repete a cada 24 segundos.
+
+<video src="/media/gw2/wing-4/samarog/Inevitable-Betrayal.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Bludgeon
+
+O Samarog levanta a *spear* e bate no chão à sua frente, causando dano extremo e *knockdown*. O ataque pode ser bloqueado ou evitado.
+
+<video src="/media/gw2/wing-4/samarog/Bludgeon.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Abaixo dos 33%
+
+Depois de trazerem novamente o Samarog para a arena, repetem as mecânicas anteriores num espaço mais reduzido.
+
+Tenham especial atenção ao **Prisoner Sweep**: pode projetar os jogadores com **Inevitable Betrayal** para lados diferentes e, abaixo dos 33%, aplica também Stun, aumentando a pressão no resto do encontro.
+
+Para esta última fase, o Bludgeon substitui um dos combos da Shockwave. A sequência será a seguinte: **Bludgeon → Shockwave combo → Prisoner Sweep**.
+
+O *tank* dos 10% costuma escrever `/gg` para evitar a última mecânica da *breakbar*.
+
+## Spear Pull
+
+Esta mecânica não ocorre de forma garantida e não tem intervalos definidos; poderá estar relacionada com o número de *spears* presentes na arena.
+
+O Samarog puxa todas as *spears* da arena na sua direção. Os jogadores sofrem dano por cada *spear* que os atingir.
+
+<video src="/media/gw2/wing-4/samarog/Spear-Pull.mp4" controls muted loop playsInline className="w-full rounded-lg" />

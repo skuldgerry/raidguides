@@ -1,0 +1,134 @@
+---
+title: Mursaat Overseer
+description: Guia do segundo encontro de Bastion of the Penitent.
+contentStatus: legacy
+editorialStatus: reviewed
+lastReviewed: 2026-07-20
+mechanicsStatus: needs-review
+buildsStatus: outdated
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+## Estatísticas
+
+| Vida | Tempo até ao enrage |
+| --- | --- |
+| 22,1 milhões | 6 minutos |
+
+## Pré-evento
+
+Depois da barricada, encontram uma plataforma quadrada de 4 × 4 placas, com uma estátua no centro. Antes de iniciarem o boss, metade da plataforma está iluminada a amarelo/laranja. Cada placa iluminada funciona como um AoE individual e causa 3,5k de dano por segundo.
+
+Sigam esta sequência:
+
+1. Falem com a Glenna, na marca **1**.
+2. Aproximem-se da porta, na marca **2**, para ativar o diálogo. Se ninguém se aproximar, a *shovel* não aparece.
+3. Depois do diálogo, apanhem a *shovel* na marca **3**.
+4. Regressem à marca **2** e usem a *shovel* para remover as pedras que bloqueiam a entrada.
+
+![Entrada e marcas do pré-evento do Mursaat Overseer](/media/gw2/wing-4/mursaat-overseer/Entrada-MO.png)
+
+## Visão geral do combate
+
+O combate decorre numa plataforma de 4 × 4 placas, com uma estátua no centro. Metade das placas começa iluminada a amarelo/laranja e causa 3,5k de dano por segundo.
+
+A sul, encontram três luzes: **Claim**, **Dispel** e **Protect**. Cada uma concede uma SAK diferente, usada ao longo do encontro. Se alguém apanhar uma luz por engano, pode escrever `/gg` ou sair da plataforma para repor a habilidade.
+
+O boss começa assim que as três habilidades forem recolhidas. Normalmente, estas funções são atribuídas a jogadores de suporte.
+
+<Callout type="info" title="Funções das três SAKs">
+- **Claim:** define o *tank* e torna as placas seguras.
+- **Dispel:** remove o *shield* das estátuas.
+- **Protect:** torna o grupo invulnerável durante cinco segundos e atrai os Jade Soldiers.
+</Callout>
+
+### Claim
+
+**Cooldown:** 8 segundos · **Targeting:** Ground, 800 range
+
+O jogador com **Claim** fica responsável pelo *tank* do boss e tem um cristal roxo sobre a cabeça. A SAK remove o brilho das placas, permitindo atravessá-las sem sofrer dano. Usem-na no centro da placa; se apontarem para uma extremidade, podem capturar a placa errada.
+
+Evitem também usar **Claim** dentro da *hitbox* dos aliados ou do boss, pois pode não funcionar corretamente. Apontem para uma área desimpedida, normalmente um pouco atrás da personagem.
+
+Este jogador controla o movimento do boss e captura as placas necessárias para as tornar seguras. Tenham em conta que as estátuas acendem uma placa assim que lhe tocam.
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Claim.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Dispel
+
+**Cooldown:** 18 segundos · **Targeting:** Enemy, 1500 range
+
+Esta SAK remove o *shield* que as estátuas atrás do boss ganham ao longo do tempo. Removam-no o mais depressa possível. Tal como o **Claim**, o **Dispel** pode ser bloqueado; o jogador responsável deve afastar-se ligeiramente para evitar que o boss intercepte o projétil.
+
+Selecionem a estátua e usem a SAK para lançar o projétil que remove o *shield*. Se demorarem demasiado, o *cooldown* pode não ficar disponível a tempo de remover os *shields* seguintes.
+
+<Callout type="info" title="Gestão de cooldowns">
+  É essencial gerir os *cooldowns* de **Dispel** e **Claim**. Se uma habilidade falhar, pode não compensar repeti-la, dependendo do estado do combate. O **Continuum Split** do Chronomancer afeta as SAKs, o que pode ser útil ou causar problemas graves.
+</Callout>
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Dispel.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Protect
+
+**Cooldown:** 180 segundos · **Targeting:** Ground, 800 range
+
+Esta SAK tem um *cooldown* muito elevado e será provavelmente usada apenas uma vez. Cria um pequeno *shield* em AoE que torna todos os jogadores invulneráveis durante cinco segundos. Quem recolher a habilidade torna-se o *tank* secundário e passa a ser seguido pelas estátuas.
+
+Quando se transformarem em Jade Soldiers, as estátuas seguem este jogador. Permaneçam na extremidade da placa ocupada pelo grupo para impedir que entrem e a capturem.
+
+Usem a SAK para destruir duas ou três estátuas, de preferência três. Se não for necessária para as estátuas, pode ser usada contra as *spears*.
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Protect.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## *Spears*
+
+Esta mecânica determina quando e para onde o grupo deve deslocar-se. Falhá-la resulta em morte. As *spears* obrigam os jogadores a mover-se entre placas, pelo que o *tank* com **Claim** deve garantir que o caminho está seguro.
+
+Quinze segundos após o início do combate, aparecem *spears* em determinadas placas. Cinco segundos depois, são ativadas e matam imediatamente quem permanecer sobre elas.
+
+O **Protect** protege desta mecânica.
+
+O padrão é definido e muda a cada dez segundos. Em cada intervalo de 25% da vida do boss, o padrão muda e o temporizador de dez segundos reinicia.
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Spears.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+**Padrão das *spears*:**
+
+![Padrão de spawn das spears](/media/gw2/wing-4/mursaat-overseer/Spears-Pattern.png)
+
+## Jade Scouts e estátuas
+
+No início do combate, as estátuas tornam-se vulneráveis e avançam lentamente até à extremidade oposta da plataforma. Com *cleave*, conseguem retirar-lhes toda a vida. As estátuas regeneram no local onde caíram e retomam o percurso assim que recuperarem por completo.
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Jades.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Quando chegam ao fim da plataforma, transformam-se em Jade Soldiers e avançam na direção do jogador com **Protect**. A aura à sua volta causa dano e aplica *stacks* de Slow, Poison e Torment em pulsos.
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Condies-Jades.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Jade Explosion
+
+Ao morrer, um Jade Soldier prepara uma explosão em AoE que causa dano muito elevado. Esta é a principal causa de *wipes* no encontro.
+
+Quando perde toda a vida, a estátua baixa-se antes de explodir. Observem a animação e façam *dodge* no momento certo.
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Estouro-Jades.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Uma das formas mais eficazes de lidar com as estátuas é usar corretamente o **Protect**: deixem pelo menos três chegar ao fim e usem a SAK para atacar as três em *cleave*.
+
+As estátuas seguem o jogador com **Protect**. Este deve permanecer na extremidade da placa ocupada pelo grupo para impedir que as estátuas entrem. Quando uma estátua toca numa placa, essa placa acende e passa a exigir o uso de **Claim**, que tem *cooldown*. Se as estátuas não entrarem todas ao mesmo tempo, o risco de *wipe* aumenta.
+
+<Callout type="warn" title="Dano das explosões">
+Cada explosão pode retirar cerca de 75–80% da vida do jogador.
+
+- **Uma estátua:** mesmo sem *dodge*, é provável que sobrevivam.
+- **Duas estátuas:** evitem pelo menos uma explosão; sofrer ambas resulta inevitavelmente em *downstate*. Usar **Protect** deixa o grupo sem essa defesa para as duas estátuas seguintes.
+- **Três estátuas:** usem **Protect** e matem as três dentro da bolha. Restará apenas uma, cuja explosão o grupo tem maior probabilidade de suportar.
+</Callout>
+
+Quando uma estátua toca pela primeira vez numa placa diferente, essa placa passa a brilhar.
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Plataforma-Jade.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+<video src="/media/gw2/wing-4/mursaat-overseer/Plataforma-Jade-2.mp4" controls muted loop playsInline className="w-full rounded-lg" />

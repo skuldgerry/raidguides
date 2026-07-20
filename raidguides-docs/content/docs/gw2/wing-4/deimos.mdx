@@ -1,0 +1,237 @@
+---
+title: Deimos
+description: Guia do último encontro de Bastion of the Penitent.
+contentStatus: legacy
+editorialStatus: reviewed
+lastReviewed: 2026-07-20
+mechanicsStatus: needs-review
+buildsStatus: outdated
+phaseCount: 3
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { GuideTerm } from '@/components/guide-term';
+
+## Estatísticas
+
+| Vida | Tempo até ao enrage |
+| --- | --- |
+| 35,98 milhões | 12 minutos |
+
+## Visão geral
+
+O jogador com mais *toughness* torna-se o *tank* do **Deimos**. Normalmente, esta função é atribuída a um Chronomancer ou Firebrand pela facilidade com que conseguem bloquear ataques quando necessário.
+
+Além de derrotarem o boss, têm de proteger o **Saul**. Se morrer, o encontro reinicia.
+
+<Callout type="info" title="O encontro tem três fases">
+- **Fase 1:** pré-evento antes do aparecimento do Deimos.
+- **Fase 2:** dos 100% aos 10%, com transições aos 75%, 50% e 25%.
+- **Fase 3:** os últimos 10% da vida do Deimos.
+</Callout>
+
+Além do *tank*, o encontro requer um **Hand Kiter (HK)**. Várias classes conseguem desempenhar esta função, sendo Herald e Soulbeast as mais usadas. O jogador mais afastado do boss atrai as «mãos» e deve impedir que cheguem ao grupo ou ao Deimos.
+
+Alguns grupos usam também um **Black Kiter (BK)** para controlar a mecânica <GuideTerm href="#black-oil--rapid-decay" tooltipId="deimos-black-oil-tooltip" description="AoE colocado sob o jogador mais próximo do boss; aumenta de tamanho quando alguém lhe toca.">Black Oil</GuideTerm>. O alvo é o jogador mais próximo do boss, excluindo o *tank*, normalmente um dos *healers*.
+
+## Fase 1 — Pré-evento
+
+O pré-evento consiste em destruir as quatro correntes que prendem o Saul no centro da plataforma. Cada corrente tem uma estátua; tocar numa destas estátuas na plataforma principal aplica Fear.
+
+<Callout type="error" title="Limite da plataforma">
+  Se alguém sair da plataforma ou for projetado para fora, morre.
+</Callout>
+
+### Como destruir as quatro correntes
+
+Um AoE verde aparece sobre um jogador aleatório. O grupo deve juntar-se dentro do AoE, deixando uma ou duas pessoas na plataforma principal. Os jogadores teleportados dividem-se para destruir as quatro estátuas. Destruir uma estátua envia os jogadores de volta à plataforma original, pelo que devem tentar destruir o maior número possível em simultâneo. As *conditions* aplicadas às estátuas continuam a causar dano depois do teleporte.
+
+Enquanto destroem as estátuas, o Deimos estará no meio e irá executar um ataque em cone fixado a um jogador. Este ataque deve ser evadido, bloqueado ou evitado — se o jogador for atingido, será projetado, e se estiver perto do limite da plataforma será projetado para fora da mesma.
+
+![Pré-evento: destruir as correntes que prendem o Saul](/media/gw2/wing-4/deimos/Deimos_Pre.gif)
+
+### Greeds e Prides
+
+Os Greeds e Prides aparecem na extremidade da plataforma e avançam em direção ao Saul. Protejam-no das explosões destas *adds*.
+
+Cada explosão provocada por um Greed causa 2% do HP total do Saul, e cada explosão de um Pride provoca 25% do HP total do Saul. Por este motivo, o foco é evitar que os Prides cheguem ao centro da plataforma. Só dá spawn a um Pride de cada vez.
+
+Os jogadores que permanecerem na plataforma devem usar Immobilize, Cripple e outros efeitos de controlo para atrasar o Pride. Um Druid pode ficar na plataforma e tirar partido de habilidades como Staff 4, CA 5 e Jacaranda F2.
+
+Os Greeds e Prides voltam a aparecer durante o encontro, abaixo dos **40%** de vida do Deimos. Atrasem os Prides e impeçam-nos de matar o Saul.
+
+![Greeds e Prides a atacar o Saul](/media/gw2/wing-4/deimos/Deimos_GeedsNPrides.gif)
+
+### Hand Kiter (HK)
+
+Depois do pré-evento, um dos ataques do Deimos é dirigido ao jogador mais afastado: o HK. Este jogador deve manter-se longe do grupo, impedir que as mãos afetem os restantes membros e sobreviver às mecânicas que decorrem em simultâneo.
+
+As mãos aparecem uma por segundo, com uma pausa de cinco segundos depois de cada grupo de cinco. Tentem agrupar cinco *stacks* de cada vez para um *kite* mais eficiente e seguro. Quanto mais *stacks* acumularem, maior será o dano recebido.
+
+O Saul irá dar spawn a um banner ao jogador mais afastado do grupo (o HK) a cada 30 segundos. Permanecer dentro do AoE do banner cura-vos em 5% por cada segundo; o banner tem uma duração de 20 segundos.
+
+O HK deve conseguir bloquear o <GuideTerm href="#mind-crush" tooltipId="deimos-mind-crush-tooltip" description="Ataque letal periódico: o grupo entra na bolha do Saul, enquanto as funções afastadas precisam de o bloquear.">Mind Crush</GuideTerm>, usado a cada 35–40 segundos a partir dos 90% de vida do Deimos. Exemplos de habilidades de mitigação incluem a Healing Skill de Glint (Herald), **Unflinching Fortitude** (Soulbeast) e **Rebound** (Tempest).
+
+As mãos desaparecem três vezes, quando o grupo regressa à plataforma principal após as mecânicas dos 75%, 50% e 25%. Nesse momento, avançam em direção ao Deimos, causam dano a quem lhes tocar e concedem-lhe um aumento de 2% de DPS por cada *stack* de Devour que o atingir. Se ninguém regressar, permanecem até ao retorno do próximo verde.
+
+Após os 10%, continuam a precisar de kitar as mãos. Durante esta fase o Deimos irá atacar com skills diferentes, atacando a plataforma em três zonas — lado esquerdo, lado direito e no meio. Este ataque projeta-vos; podem ver onde o Deimos irá atacar pelo movimento dos braços.
+
+### Saul D'Alessio
+
+O Saul irá dar spawn a um banner ao jogador mais afastado do grupo (o HK) a cada 30 segundos. Permanecer dentro do AoE do banner cura-vos em 5% por cada segundo; o banner tem uma duração de 20 segundos.
+
+A cada 60 segundos, o Saul aplica ao Deimos o *debuff* **Unnatural Signet**. Durante dez segundos, este efeito duplica em 200% o dano físico recebido pelo boss. Aproveitem esta janela para o *burst* e para os modificadores de dano, como **Bane Signet** ou **Leader of the Pack**.
+
+Durante o **Mind Crush**, o Saul cria uma bolha no centro da plataforma que nega o dano do ataque. Durante os três segundos de *cast*, os aliados recebem **Form Up and Advance!**, um efeito semelhante a *superspeed* que facilita o agrupamento no centro.
+
+Durante o resto do encontro, protejam o Saul. Abaixo dos **40%**, começam a surgir Greeds e Prides. Cada Pride retira 25% da vida máxima do Saul, pelo que quatro são suficientes para causar um *wipe*. O Druid deve equipar a Jacaranda e usar o F2 sempre que possível; os restantes jogadores devem ajudar a matar ou atrasar os Prides.
+
+<Callout type="info" title="Curar o Saul">
+  O Saul pode ser curado, mas os membros do grupo têm prioridade. Só recebe a cura se os restantes jogadores estiverem fora do alcance. A vida do Saul aparece no canto superior direito do ecrã.
+</Callout>
+
+![O Saul D'Alessio no pré-evento](/media/gw2/wing-4/deimos/Deimos_Saul.gif)
+
+![Debuff Unnatural Signet aplicado ao Deimos](/media/gw2/wing-4/deimos/Unnatural-Signet.png)
+
+## Fase 2 — dos 100% aos 10%
+
+Esta fase combina várias mecânicas e exige atenção constante. Apenas o *tank* deve permanecer à frente do Deimos.
+
+### Annihilate / "Pizza"
+
+O Deimos levanta os dois *maces* e bate com eles no chão, criando um AoE conhecido como «pão recheado» ou «pizza». A área de efeito avança progressivamente como uma onda. Para evitar os primeiros golpes, façam *dodge* para fora ou na direção onde o ataque começa; os golpes nas costas do boss ocorrem mais tarde. Nunca fiquem diretamente atrás do boss.
+
+Caso levem um hit desta skill, serão projetados (knockback), podendo ir para fora da plataforma ou para cima dos stacks do HandKiter, resultando na vossa morte. Recebem ainda 25 stacks de Vulnerability.
+
+*Stability* **não** funciona. No entanto, Aegis funciona — mas só protege de um hit, o que significa que se estiverem demasiado próximos do boss podem acabar por levar com dois hits diferentes. Devem garantir que estão apenas numa das "fatias" e recuar se necessário para garantir bom posicionamento.
+
+<Callout type="info" title="Evitem o limite das fatias">
+  Se estiverem sobre o limite entre duas fatias, sofrem dois golpes e são projetados.
+</Callout>
+
+O Chrono Tank e o HFB devem providenciar Aegis aos membros do squad. Este ataque é repetido a cada 17 segundos e pode sofrer delay devido a outros ataques.
+
+<video src="/media/gw2/wing-4/deimos/Annihilate.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Mind Crush
+
+Este ataque começa aos **90% de vida** do Deimos. Durante o *cast*, o boss roda os dois *maces* e o Saul diz «Stand in the ward! Quickly!», criando uma bolha no centro da plataforma e concedendo **Form Up and Advance!**.
+
+Têm aproximadamente cinco segundos para entrar na bolha. Quem ficar de fora sem Block ou Aegis entra em *downstate*. O ataque não pode ser evitado com *dodge*.
+
+Quem conseguir bloquear este ataque com alguma skill/block irá receber um debuff que, durante 10 segundos, causa perda de 7% do HP máximo por segundo.
+
+O tank, HK e BK devem ser capazes de bloquear este ataque de forma independente, visto serem as roles mais importantes para este boss. Geralmente o tank é o responsável por garantir Aegis ao BK, uma vez que este deve andar colado ao boss.
+
+Este ataque ocorre a cada 35-40 segundos.
+
+<video src="/media/gw2/wing-4/deimos/Mind-Crush.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Thief (Saul D'Alessio) — 75%
+
+Aos 75%, um jogador aleatório, exceto o *tank* e o HK, recebe um AoE verde. O grupo deve juntar-se dentro do AoE, com exceção do *tank* e do HK — e do BK, caso o *tank* precise de cura ou o grupo considere mais seguro. Os jogadores no verde são teleportados para a plataforma do pré-evento, onde encontram uma cópia do Saul, o **Thief**.
+
+Este Saul efetua uma skill que rouba os boons aos membros do squad se a breakbar não for partida. Ele irá tentar efetuar esta skill inúmeras vezes até o matarem — apesar de a breakbar ser curta, devem tentar ser o mais rápidos possível a dar CC. Deixar o Saul receber todos os boons pode causar uma pressão enorme no squad.
+
+**Defiance bar:** 300.
+
+Quando o Saul chegar aos 50% de vida, regressam à plataforma do Deimos e passam a lidar com ambos, incluindo a *breakbar* do Saul, em simultâneo.
+
+Ao voltarem, as mãos que se encontravam na plataforma irão prosseguir em direção ao Deimos — evitem tocar nessas mãos, pois por cada mão que chegue ao Deimos, ele recebe um aumento de 2% de DPS.
+
+Podem focar o Saul até o matarem, ou forçar o Saul a estar dentro da hitbox do Deimos, matando-o através do vosso cleave enquanto aproveitam para dar DPS ao Deimos. O Saul irá dar aggro ao jogador ou pet que tiver mais *Precision* — geralmente o Warrior ou o Soulbeast. Usem esta mecânica a vosso favor.
+
+Após matarem o Saul (Thief), devem continuar com a adição de algumas mecânicas novas.
+
+![O Saul (Thief) que rouba boons aos 75%](/media/gw2/wing-4/deimos/Deimos_thief.gif)
+
+### Demonic Tears
+
+Esta mecânica irá aparecer após os 75%. AoEs pequenos brancos irão dar spawn nas duas plataformas, disparando projéteis aos jogadores.
+
+As *tears* podem ser neutralizadas: basta passar sobre o AoE branco para as recolher.
+
+Quando apanham uma tear, recebem um debuff e uma caveira verde aparece por cima da personagem, indicando que não conseguem apanhar mais nenhuma tear nos próximos 60 segundos. Devido a este debuff, podem evitar recolher tears quando são teleportados para ir ter com o Saul (75% - 50% - 25%), de forma a terem cooldown na plataforma principal.
+
+<Callout type="warn" title="Gerir o debuff das tears">
+  O *debuff* aplica-se nas duas plataformas. Se o boss estiver perto dos 10%, ponderem não recolher *tears* na plataforma principal, pois podem precisar de o fazer na plataforma final. Adaptem a decisão ao estado do combate.
+</Callout>
+
+As tears dão spawn a cada 15 segundos.
+
+<video src="/media/gw2/wing-4/deimos/Demonic-Tears.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Black Oil / Rapid Decay
+
+Aos **60%**, o primeiro **Black Oil** aparece sob o jogador mais próximo do boss, excluindo o *tank*.
+
+Dá spawn com uma cor inicial laranja de pré-aviso — durante esta cor devem sair de cima do AoE o mais rapidamente possível. Após 3 segundos torna-se preto e passa a fazer efeito caso alguém lhe toque.
+
+Depois de pisado, além do dano elevado que dá, o AoE irá aumentar de tamanho, preenchendo a plataforma cada vez que toca em alguém. Ao ficarem com a plataforma reduzida e incapazes de ir ao centro durante o Mind Crush, devem stackar e tentar providenciar Aegis a todos os membros do squad.
+
+<Callout type="error" title="Não pisem o Black Oil">
+  Esta é uma das principais causas de *wipe* no encontro. Prestem atenção e evitem tocar no AoE.
+</Callout>
+
+Se derem dodge por cima de um AoE, a mecânica não é ativada. Se o pisarem uma vez, tentem dar dodge duplo após, para evitar o segundo "proc".
+
+Aparece um novo AoE a cada 15 segundos sob o jogador mais próximo do boss, excluindo o *tank*. Cada Oil permanece ativo durante 30 segundos e podem existir até três em simultâneo.
+
+Caso o resto do squad tenha sido teleportado (menos o tank e o HK), o HK, além das mecânicas que já tem de lidar, terá também de stackar mãos, evitar o Mind Crush e ainda kitar o Black Oil.
+
+O BK procura ser o jogador mais próximo do boss para controlar onde aparece o AoE. Na maioria dos grupos, isto funciona sobretudo durante os verdes, quando o *healer* fica com o *tank* e os restantes jogadores enfrentam o Saul. Quando o grupo regressa e ataca diretamente o Deimos, haverá normalmente outro jogador perto do boss, reduzindo a eficácia do BK.
+
+![Black Oil / Rapid Decay a expandir-se na plataforma](/media/gw2/wing-4/deimos/Deimos_Rapid_Decay.gif)
+
+### Gambler (Saul D'Alessio) — 50%
+
+Aos 50%, o AoE verde volta a aparecer sobre um jogador, exceto o HK e o *tank*. Desta vez, a cópia do Saul é diferente e não exige CC.
+
+Este Saul vai desaparecer do meio da plataforma e criar 3 clones — têm de descobrir qual dos 4 é o verdadeiro. Devem ignorar os clones e matar o Saul.
+
+<Callout type="info" title="Identificar o verdadeiro Saul">
+  Entre os quatro, o verdadeiro Saul é aquele que tem um Staff diferente.
+</Callout>
+
+<Callout type="warn" title="Atenção">
+  Ao matar o verdadeiro, evitem ficar no meio dos outros — mantenham-se sempre nas costas do Saul.
+</Callout>
+
+Após atingirem os 50% do Saul, retornam à plataforma principal. Devem proceder da mesma forma que com o Saul anterior, e tirar o máximo proveito do vosso cleave trazendo o Saul até ao Deimos.
+
+Caso ele se volte a dividir na plataforma principal durante o Mind Crush, isto é problemático e pode causar uma enorme pressão no squad, devido ao enorme dano que recebem do Saul enquanto estão na bolha, assim como do debuff caso tenham ficado de fora.
+
+![Saul (Gambler) e os seus clones aos 50%](/media/gw2/wing-4/deimos/Deimos_Gambler.gif)
+
+### Drunkard (Saul D'Alessio) — 25%
+
+Aos 25%, aparece outro AoE verde sobre um jogador aleatório, exceto o *tank* e o HK.
+
+Este Saul é problemático caso não partam a breakbar — esta breakbar tem de ser partida mais rápido que a do primeiro Saul (Thief).
+
+Ao falharem a mecânica, são teleportados para um sítio aleatório da plataforma. Enquanto não se encontram na plataforma principal, esta mecânica não vos afeta muito — no entanto, na plataforma principal pode causar wipe caso alguém seja teleportado para cima de um Black Oil que já reduziu a plataforma em 80%.
+
+Após atingirem os 50% do Saul, irão regressar à plataforma principal. Devem proceder da mesma forma: trazer o Saul até ao Deimos se possível e aproveitar para atacar os dois, sem esquecer o CC.
+
+**Defiance bar:** 300.
+
+![Saul (Drunkard) aos 25%](/media/gw2/wing-4/deimos/Deimos_Drunkard.gif)
+
+## Fase 3 — 10%
+
+Aos 10%, o Deimos torna-se invulnerável. Aproveitem este momento para se agruparem e fazerem *precast* de *boons* antes do teleporte.
+
+Depois do teleporte, o Deimos aparece numa das extremidades da arena com uma *hitbox* maior. Nesta fase, deixa de existir *tank*.
+
+Continuam a surgir **Demonic Tears** e **Black Oil**, e continua a ser necessário um HK.
+
+Nesta fase, o Deimos usa apenas três ataques. Levanta um dos braços, esquerdo ou direito, e bate no chão; o lado correspondente da plataforma é atingido, causando *knockback* e podendo projetar jogadores para fora. Quem estiver demasiado perto do boss pode ser atingido mesmo no lado contrário.
+
+A sequência é sempre a mesma: um braço, o outro e ambos no centro; depois de uma pausa, repete-se. Sigam a ordem e evitem os golpes para não serem projetados.
+
+<Callout type="info" title="Aegis, não dodge">
+  O *dodge* não funciona contra este golpe, mas Aegis protege-vos.
+</Callout>
+
+![Ataque final da fase dos 10%](/media/gw2/wing-4/deimos/Deimos_Last10_Quebec.gif)

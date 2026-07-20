@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#09090b" />
+    <meta
+      name="description"
+      content="Guias para raids de Guild Wars 2 em Português, com mecânicas, vídeos e explicações por encontro."
+    />
+    <meta property="og:title" content="Raid Guides — Guias de raids em Português" />
+    <meta
+      property="og:description"
+      content="Guias de Guild Wars 2 com mecânicas, vídeos e explicações organizadas por encontro."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:url" content="https://www.raidguides.pt/" />
+    <link rel="canonical" href="https://www.raidguides.pt/" />
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Raid Guides — Guias de raids em Português</title>
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="icon-archive" viewBox="0 0 24 24">
+        <path d="M4 7h16v13H4zM3 4h18v3H3zM9 11h6" />
+      </symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24">
+        <path d="M21 12a8 8 0 0 1-9 8 9 9 0 0 1-4-.9L3 21l1.8-4A8 8 0 1 1 21 12Z" />
+      </symbol>
+      <symbol id="icon-discord" viewBox="0 0 24 24">
+        <path fill="currentColor" stroke="none" d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52c.08.14.15.31.2.47a16.5 16.5 0 0 0-7.26 0c.05-.16.13-.33.2-.47a19.8 19.8 0 0 0-4.89 1.52C.57 9 .06 13.5.48 17.94a19.9 19.9 0 0 0 5.99 3.03c.48-.66.91-1.36 1.28-2.1-.7-.26-1.37-.58-2-.96l.38-.29c3.86 1.79 8.04 1.79 11.86 0l.38.29c-.64.38-1.31.7-2 .96.37.74.8 1.44 1.28 2.1a19.9 19.9 0 0 0 5.99-3.03c.5-5.15-.86-9.6-3.32-13.57ZM8.02 15.72c-1.2 0-2.16-1.09-2.16-2.42 0-1.33.95-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.33-.95 2.42-2.16 2.42Zm7.97 0c-1.18 0-2.15-1.09-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.22 0 2.18 1.1 2.16 2.42 0 1.33-.94 2.42-2.16 2.42Z" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-5-5 5 5-5 5" />
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24">
+        <path d="M15 4h5v5m0-5-9 9M18 13v6H5V6h6" />
+      </symbol>
+      <symbol id="icon-warning" viewBox="0 0 24 24">
+        <path d="M12 3 2.7 20h18.6L12 3Zm0 6v5m0 3h.01" />
+      </symbol>
+      <symbol id="wing-gate" viewBox="0 0 24 24">
+        <path class="gate-recess" d="M7.25 22V11.25a4.75 4.75 0 0 1 9.5 0V22h-9.5Z" />
+        <path d="M2 22V5h3V2h3v3h2V2h4v3h2V2h3v3h3v17h-5V11a5 5 0 0 0-10 0v11H2Z" />
+        <path class="gate-lines" d="M2.5 9h4.75m9.5 0h4.75m-19 6h4.75m9.5 0h4.75" />
+      </symbol>
+    </svg>
+
+    <aside class="notice" data-notice>
+      <div class="shell notice-inner">
+        <svg aria-hidden="true"><use href="#icon-warning" /></svg>
+        <p>
+          Estas guias de Guild Wars 2 podem não estar totalmente atualizadas. As mecânicas continuam, em geral,
+          válidas, mas classes, builds e composições podem estar desatualizadas.
+        </p>
+        <button type="button" aria-label="Fechar aviso" data-dismiss-notice>×</button>
+      </div>
+    </aside>
+
+    <header class="header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Raid Guides — início">
+          <span class="wordmark-icon" aria-hidden="true">RG</span>
+          <span>Raid Guides</span>
+        </a>
+        <nav aria-label="Navegação principal">
+          <a class="discord-button" href="https://discord.gg/nqqrpwrcpM" target="_blank" rel="noreferrer" aria-label="Discord">
+            <svg aria-hidden="true"><use href="#icon-discord" /></svg>
+          </a>
+          <a class="nav-docs-link" href="https://docs.raidguides.pt">
+            Abrir as guias
+            <svg aria-hidden="true"><use href="#icon-arrow" /></svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <svg aria-hidden="true"><use href="#icon-archive" /></svg>
+              Guias de raids · Guild Wars 2
+            </p>
+            <h1>Raids de Guild Wars 2.<span>Explicadas em Português.</span></h1>
+            <p class="hero-text">
+              Guias para as primeiras quatro wings, com mecânicas, estratégias e vídeos organizados por encontro.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="https://docs.raidguides.pt">
+                Abrir as guias
+                <svg aria-hidden="true"><use href="#icon-arrow" /></svg>
+              </a>
+              <a class="secondary-button" href="https://discord.gg/nqqrpwrcpM" target="_blank" rel="noreferrer">
+                <svg aria-hidden="true"><use href="#icon-chat" /></svg>
+                Entrar no Discord
+                <svg class="external-icon" aria-hidden="true"><use href="#icon-external" /></svg>
+              </a>
+            </div>
+            <dl class="hero-stats">
+              <div><dt>15</dt><dd>encontros</dd></div>
+              <div><dt>4</dt><dd>wings</dd></div>
+              <div><dt>PT</dt><dd>Português</dd></div>
+            </dl>
+          </div>
+
+          <div class="archive-card" aria-label="Conteúdo das guias">
+            <div class="archive-glow" aria-hidden="true"></div>
+            <div class="archive-header">
+              <div>
+                <p>Arquivo de raids</p>
+                <strong>Wings I—IV</strong>
+              </div>
+              <span class="portal-mark wing-icon" aria-hidden="true">
+                <svg><use href="#wing-gate" /></svg><b>1</b>
+              </span>
+            </div>
+            <div class="wing-list">
+              <a class="wing-row" href="https://docs.raidguides.pt/docs/gw2/wing-1/vale-guardian">
+                <span class="wing-icon" aria-hidden="true"><svg><use href="#wing-gate" /></svg><b>1</b></span>
+                <span class="wing-copy"><strong>Wing 1 · Spirit Vale</strong><small>Vale Guardian · Spirit Woods · Gorseval · Sabetha</small></span>
+                <svg class="row-arrow" aria-hidden="true"><use href="#icon-arrow" /></svg>
+              </a>
+              <a class="wing-row" href="https://docs.raidguides.pt/docs/gw2/wing-2/slothasor">
+                <span class="wing-icon" aria-hidden="true"><svg><use href="#wing-gate" /></svg><b>2</b></span>
+                <span class="wing-copy"><strong>Wing 2 · Salvation Pass</strong><small>Slothasor · Bandit Trio · Matthias</small></span>
+                <svg class="row-arrow" aria-hidden="true"><use href="#icon-arrow" /></svg>
+              </a>
+              <a class="wing-row" href="https://docs.raidguides.pt/docs/gw2/wing-3/siege-the-stronghold">
+                <span class="wing-icon" aria-hidden="true"><svg><use href="#wing-gate" /></svg><b>3</b></span>
+                <span class="wing-copy"><strong>Wing 3 · Stronghold of the Faithful</strong><small>Escort · Keep Construct · Twisted Castle · Xera</small></span>
+                <svg class="row-arrow" aria-hidden="true"><use href="#icon-arrow" /></svg>
+              </a>
+              <a class="wing-row" href="https://docs.raidguides.pt/docs/gw2/wing-4/cairn-the-indomitable">
+                <span class="wing-icon" aria-hidden="true"><svg><use href="#wing-gate" /></svg><b>4</b></span>
+                <span class="wing-copy"><strong>Wing 4 · Bastion of the Penitent</strong><small>Cairn · Mursaat Overseer · Samarog · Deimos</small></span>
+                <svg class="row-arrow" aria-hidden="true"><use href="#icon-arrow" /></svg>
+              </a>
+            </div>
+            <div class="archive-status"><span></span>Documentação disponível</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="status-section" aria-labelledby="status-title">
+        <div class="shell status-grid">
+          <div>
+            <p class="kicker">Estado do conteúdo</p>
+            <h2 id="status-title">Estas guias de Guild Wars 2 podem não estar 100% atualizadas.</h2>
+          </div>
+          <div class="status-copy">
+            <p>
+              A maioria das mecânicas dos encontros continua útil. As referências a classes, builds, composições e
+              algumas estratégias refletem, porém, o período em que as guias foram escritas.
+            </p>
+            <p>
+              Cada guia indica o seu estado de revisão. Quando houver dúvida, confirma as recomendações de builds
+              numa fonte atualizada ou pergunta no Discord.
+            </p>
+            <a class="inline-link" href="https://discord.gg/nqqrpwrcpM" target="_blank" rel="noreferrer">
+              <svg aria-hidden="true"><use href="#icon-chat" /></svg>
+              Entrar no Discord
+              <svg class="external-icon" aria-hidden="true"><use href="#icon-external" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <p>Raid Guides · Projeto independente não afiliado à ArenaNet.</p>
+        <nav aria-label="Ligações de rodapé">
+          <a href="https://docs.raidguides.pt">Documentação</a>
+          <a href="https://discord.gg/nqqrpwrcpM" target="_blank" rel="noreferrer">Discord</a>
+          <a href="https://github.com/skuldgerry/raidguides" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      const notice = document.querySelector('[data-notice]');
+      const dismissButton = document.querySelector('[data-dismiss-notice]');
+      if (localStorage.getItem('raidguides-content-notice') === 'dismissed') notice?.remove();
+      dismissButton?.addEventListener('click', () => {
+        localStorage.setItem('raidguides-content-notice', 'dismissed');
+        notice?.remove();
+      });
+    </script>
+  </body>
+</html>

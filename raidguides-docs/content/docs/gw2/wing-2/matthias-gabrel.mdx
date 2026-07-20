@@ -1,0 +1,220 @@
+---
+title: Matthias Gabrel
+description: Guia do último encounter do Salvation Pass.
+contentStatus: legacy
+editorialStatus: reviewed
+mechanicsStatus: needs-review
+buildsStatus: outdated
+lastReviewed: 2026-07-20
+phaseCount: 4
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Steps, Step } from 'fumadocs-ui/components/steps';
+import { GuideTerm } from '@/components/guide-term';
+
+## Estatísticas
+
+| Vida | Tempo para Enrage |
+| --- | --- |
+| 25,9 milhões | 10 minutos |
+
+## Introdução
+
+Ao entrarem no templo, encontram quatro fontes de água. Memorizem a sua posição, pois são necessárias para remover a <GuideTerm href="#corruption" tooltipId="matthias-corruption-tooltip" description="Efeito periódico que obriga o jogador afetado a usar uma das quatro fontes de água da arena.">Corruption</GuideTerm>.
+
+As fontes estão distribuídas em redor da sala e cada uma fica temporariamente indisponível depois de ser usada.
+
+Não existe um *tank* designado: Matthias ganha *aggro* sobre o jogador mais afastado. Como várias mecânicas obrigam os jogadores a abandonar o grupo ou a afastar-se do boss, Matthias pode deslocar-se bastante durante o encontro.
+
+Uma das mecânicas principais é o <GuideTerm href="#blood-shield" tooltipId="matthias-blood-shield-tooltip" description="Escudo que torna Matthias invulnerável e é removido refletindo os Blood Shards de volta para o boss.">Blood Shield</GuideTerm>. Matthias recebe este escudo várias vezes e fica invulnerável até o grupo o remover através da reflexão dos Blood Shards.
+
+## Resumo de fases
+
+| Fase | Início | Tema | Mecânica ambiental | Mecânica passiva | Mecânica própria | Corruption | Sacrifice |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 100% | Gelo | Patches de Gelo | Chill | Hadoken | Ativa | Ativa |
+| 2 | 80% | Fogo | Tornados de Fogo | Se o jogador não se movimentar ou levar dano, são aplicados 3 stacks de burning | Well of the Profane | Ativa | Ativa |
+| 3 | 60% | Tempestade | Nuvens | Se o jogador se mover, ganha stacks. Se o número de stacks chegar aos 10, o jogador leva knockdown e são aplicados 5 stacks de poison | Timed Bomb | Ativa | Ativa |
+| 4 | 40% | Todas (ciclo de 30 s, a começar em gelo) | Fantasmas e as três anteriores, alternadas | As três anteriores, alternadas | Hadoken e Timed Bomb durante toda a fase 4 | Ativa | Inativa |
+
+## Blood Shield
+
+Matthias recebe um escudo de Bloodstone e fica invulnerável. O escudo começa com 18 *stacks* de **Blood Shield**, que têm de ser removidos. Pouco depois, o jogador que iniciou o encontro fica marcado com um pequeno alvo sobre a personagem, indicando que Matthias vai lançar uma sequência de Blood Shards na sua direção.
+
+Matthias não se move durante o ataque.
+
+Os Blood Shards causam dano elevado, mas removem *stacks* do escudo quando são refletidos de volta para o boss. O jogador marcado deve posicionar-se entre o efeito de reflexão e Matthias.
+
+Se o *squad* usar **Feedback** de Mesmer, por exemplo, a capacidade cria uma bolha com dimensões idênticas à do boss.
+
+<Callout type="info">
+Consoante a capacidade de reflexão e a forma como é colocada, os cristais podem não ser refletidos se o jogador marcado permanecer dentro da bolha do boss. Nesse caso, não removem *stacks* e o jogador sofre o dano massivo dos Blood Shards.
+</Callout>
+
+<Callout type="warn">
+Não usem capacidades que destruam projéteis durante esta mecânica. Se os Shards forem destruídos, não podem ser refletidos e não removem *stacks* do escudo.
+</Callout>
+
+Se não removerem todos os *stacks*, aguardem pelo próximo ataque de Blood Shards e voltem a refletir os cristais.
+
+O escudo reaparece aproximadamente 30 segundos depois de o anterior ser destruído, ou 40 segundos na última fase.
+
+Garantam que as capacidades de reflexão estão disponíveis em cada Blood Shield. É aconselhável ter dois jogadores com reflexões, para recuperar de uma primeira tentativa falhada ou da morte do jogador designado.
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Shield.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Oppressive Gaze / Hadoken
+
+Matthias roda o *staff* e lança uma bola de energia na direção do jogador marcado pelos Blood Shards. O ataque causa dano elevado a todos os jogadores no trajeto. Observem a direção para a qual Matthias está virado durante a animação.
+
+O ataque repete-se aproximadamente a cada 15 segundos, apenas na primeira fase, até aos 80%, e na última, abaixo dos 40%.
+
+O ataque pode ser bloqueado ou evitado com *evade*, *Distortion* ou *sidestep*. Se estiverem afastados de Matthias, um *sidestep* no momento certo é suficiente.
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Hadukken.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Durante o restante encontro, terão de lidar com várias mecânicas em simultâneo.
+
+## Corruption
+
+A **Corruption** começa aos 9:55 e afeta um jogador aleatório a cada 30 segundos. O alvo recebe uma pequena caveira verde sobre a personagem e um AoE que causa dano a todos os jogadores dentro da área, incluindo o próprio. As bordas do ecrã ficam amarelas e ouve-se um som característico.
+
+Para remover o efeito, entrem numa das quatro fontes em redor do templo. A Corruption desaparece, mas a fonte fica corrompida e assume um tom avermelhado, causando dano a quem a pisar. Ao fim de 90 segundos, volta ao normal e pode ser usada novamente.
+
+Antes de se deslocarem, confirmem pela cor que a fonte escolhida está limpa. Devido aos 90 segundos de espera, em alguns momentos pode existir apenas uma fonte disponível.
+
+Esta mecânica pode exercer bastante pressão sobre os *healers*. Acompanhem quem se dirige às fontes e forneçam cura adicional quando necessário.
+
+Dez segundos após a primeira Corruption, Matthias sacrifica um jogador aleatório.
+
+<Callout type="info">
+O jogador precisa da Mastery **Forsaken Thicket Waters** para não ficar em *stun* depois de remover a Corruption.
+</Callout>
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Corruption.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Blood Sacrifice
+
+O **Blood Sacrifice** começa aos 9:45. A partir daí, Matthias escolhe a cada 45 segundos um jogador aleatório para sacrificar. Um jogador afetado por Corruption não pode ser escolhido.
+
+Abaixo dos 40% deixam de ocorrer novos sacrifícios. Contudo, se alguém tiver sido escolhido pouco antes dessa percentagem, continua a precisar de CC.
+
+Uma mensagem no ecrã identifica o jogador sacrificado. Este é teleportado para o centro da sala, fica vulnerável aos ataques do *squad* e recebe uma breakbar. Não se pode mover nem usar capacidades. Se o grupo não partir a barra nos 10 segundos seguintes, o jogador morre.
+
+Partam a breakbar o mais rapidamente possível, evitando causar dano ao jogador. O sacrifício pode morrer tanto por falta de CC como pelos ataques do próprio grupo.
+
+O jogador sacrificado passa a ter 100 000 de vida e uma breakbar de 2500.
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Sacrifice.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Shards of Rage
+
+Este ataque coincide com o primeiro Blood Sacrifice. Matthias executa uma cambalhota e bate com o *staff* no chão, lançando Blood Shards em todas as direções. Causam dano moderado, mas receber vários dentro da *hitbox* do boss pode provocar *down* imediato. Cada Shard que atinge um jogador aplica um *stack* de **Blood Fueled**, aumentando o seu dano em 10% durante 20 segundos.
+
+Estes cristais são projéteis e podem ser destruídos ou refletidos. Se forem refletidos, aplicam os *stacks* de Blood Fueled a Matthias.
+
+Evitem capacidades e *traits* de reflexão durante este ataque.
+
+<Callout type="warn">
+Capacidades como o 5 de *staff* de Druid podem ser usadas dentro da *hitbox* do boss durante este ataque, transformando os Blood Shards em cura para o grupo.
+</Callout>
+
+<video src="/media/gw2/wing-2/matthias-gabrel/5Staff.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Fase 1 — Ice (100%–80%)
+
+**Tempo:** tempestade de neve — reduz a velocidade de movimento e aplica *Chill* e dano moderado aos jogadores a cada 10 segundos.
+
+**Efeito ambiental:** Icy Patches — a cada 5 segundos surgem manchas de gelo no chão. Quem permanecer nessa área fica em *Knockdown*.
+
+As manchas de gelo podem ser removidas através da aplicação de *stacks* de *Burning* e podem permanecer depois dos 80%. Um Sun Spirit permite ao *squad* aplicar *Burning* ao atacar e ajuda a limpar estes AoEs.
+
+Mecânica única durante esta fase: [Oppressive Gaze / Hadoken](#oppressive-gaze--hadoken)
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Fase-1.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Fase 2 — Fire (80%–60%)
+
+**Tempo:** onda de calor — a cada 10 segundos, os jogadores recebem três *stacks* de *Burning*. Ficar parado também causa dano, tal como no boss final da Fractal Volcanic.
+
+**Efeito ambiental:** tornados de fogo — aparecem dois tornados na sala. Qualquer jogador que lhes toque fica preso durante alguns segundos enquanto sofre dano.
+
+Mecânica única durante esta fase: [Unstable Blood Magic](#unstable-blood-magic)
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Fase-2.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Unstable Blood Magic
+
+A cada 10 segundos, durante a Fase 2 (80%–60%) e a última fase (&lt;40%), um jogador recebe uma Special Action Key (SAK) e uma caveira grande sobre a personagem. Esta caveira é maior do que a da Corruption.
+
+Ao usar a SAK, o jogador perde Unstable Blood Magic e coloca um AoE chamado **Well of the Profane** no local. A área tem um raio aproximado de 360, causa dano elevado a quem lhe tocar e desaparece ao fim de 90 segundos.
+
+Se o jogador ficar *downed* enquanto tem a SAK, a capacidade é ativada automaticamente, tal como na Slothasor.
+
+Devido à duração do Well of the Profane, escolham o local com cuidado para não dificultar o movimento do *squad* nem o acesso às fontes. Nunca o coloquem sobre uma fonte.
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Unstable-Blood.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Fase 3 — Storm (60%–40%)
+
+**Tempo:** aguaceiros — aplicam cinco *stacks* de *Poison* e causam dano moderado aos jogadores a cada 3 segundos. Mover-se também aplica *stacks* de um *debuff* que, ao chegar a 10, provoca um *Knockdown* de 3 segundos.
+
+**Ambiente:** nuvens de tempestade — uma nuvem larga percorre a sala no sentido horário (CW), causa dano elevado e aumenta os *stacks* de Downpour enquanto o jogador permanecer no AoE.
+
+Mecânica única da fase: [Zealous Benediction](#zealous-benediction)
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Storm.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Zealous Benediction
+
+A cada 20 segundos, cinco jogadores — todos os dez abaixo dos 40% — recebem AoEs que se preenchem ao longo do tempo. Quando ficam completos, causam dano ao próprio jogador e provocam *down* imediato a qualquer outra pessoa dentro da área.
+
+Ao contrário da fase anterior, devem evitar movimento desnecessário. Ainda assim, precisam de se deslocar para as fontes e de separar os AoEs de Zealous Benediction.
+
+Vigiem o número de *stacks*. Ao chegar a 10, o efeito transforma-se em **Unbalanced** e provoca um *Knockdown*, que pode ser evitado com *Stability* ou bloqueado. Se deixarem de se mover, os *stacks* são removidos.
+
+A remoção de *conditions* é particularmente importante nesta fase, porque os *stacks* de *Poison* reduzem a cura recebida pelo grupo.
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Zealous-Benediction.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Fase 4 — Abomination (40%–0%)
+
+<Steps>
+<Step>
+
+Aos 40%, Matthias é consumido pela magia de Bloodstone e transforma-se numa abominação. Todos os jogadores recebem Zealous Benediction e *Fear*.
+
+<Callout type="info">
+Guardem uma capacidade que forneça *Stability* para ignorar o *Fear*.
+</Callout>
+
+</Step>
+<Step>
+
+Durante os últimos 40%, os temas, o tempo e os efeitos ambientais alternam a cada 30 segundos. Matthias usa todas as mecânicas próprias das fases anteriores e começa por executar três em rápida sucessão: depois de Zealous Benediction, usa Oppressive Gaze/Hadoken e, em seguida, Shards of Rage.
+
+As mecânicas são idênticas às anteriores, contudo passam a ser mais perigosas:
+
+- **Oppressive Gaze** — Causa mais dano e tem uma nova animação.
+- **Blood Sacrifice** — Deixa de ocorrer abaixo dos 40%.
+- **Fire Tornadoes** — Passam a existir quatro tornados.
+- **Storm Cloud** — Passam a existir duas nuvens.
+- **Zealous Benediction** — Afeta todos os jogadores que não estejam sob outra mecânica.
+
+<video src="/media/gw2/wing-2/matthias-gabrel/Abomination.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+</Step>
+</Steps>
+
+### Surrender / Spirits
+
+Esta é a última mecânica introduzida no encontro.
+
+Começa 15 segundos depois de Matthias atingir os 40%. Um Spirit invulnerável surge num dos cantos da sala e atravessa a arena em linha reta, passando pelo centro, até desaparecer no lado oposto. Quinze segundos depois surge outro Spirit e o padrão repete-se.
+
+A partir dos 20%, surge um Spirit a cada 15 segundos.
+
+Os Spirits têm um pequeno AoE à sua volta que causa dano massivo a qualquer jogador que lhe toque. O dano pode ser bloqueado, mas não pode ser evitado com *evade*.
+
+Façam *sidestep* e evitem os Spirits.

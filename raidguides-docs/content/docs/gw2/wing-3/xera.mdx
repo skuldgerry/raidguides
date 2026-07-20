@@ -1,0 +1,248 @@
+---
+title: Xera
+description: Guia do último encounter do Stronghold of the Faithful.
+contentStatus: legacy
+editorialStatus: reviewed
+mechanicsStatus: needs-review
+buildsStatus: outdated
+lastReviewed: 2026-07-20
+phaseCount: 2
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { GuideTerm } from '@/components/guide-term';
+
+| Estatística | Valor |
+| --- | --- |
+| Vida | 22,62 milhões |
+| Breakbar (Defiance Bar) | 2000 |
+| Tempo para Enrage | 11 minutos |
+
+<Callout type="info" title="Info">
+Este encontro tem um *tank* dedicado. O jogador com mais *Toughness* determina o posicionamento e os movimentos do boss.
+</Callout>
+
+## Mini-jogo
+
+Para iniciar o encontro, eliminem um clone de Xera na plataforma 1.
+
+Antes de chegarem ao boss, dividam o *squad* para concluir o mini-jogo. Por exemplo, o subgrupo 2 segue para a plataforma 6 e o subgrupo 3 para a plataforma 2.
+
+Aos 10:54 no temporizador, aparecem duas Ley Lines em direção às plataformas 6 e 2. Depois do mini-jogo, os grupos voltam a encontrar-se na plataforma 4 e seguem para Xera.
+
+![Layout das plataformas do mini jogo](/media/gw2/wing-3/xera/Plataformas.png)
+
+As plataformas 6 e 2 partilham a mesma mecânica, tal como as plataformas 5 e 3. Em todas elas, o objetivo é destruir o cristal para desbloquear a Ley Line seguinte.
+
+### Plataformas 6 e 2
+
+Para destruir o cristal, têm primeiro de remover o escudo.
+
+Empurrem as três orbs em direção aos três Rifts, no sentido horário. *Pulls*, *pushes* e *knockbacks* funcionam, mas evitem mover mais do que uma orb de cada vez.
+
+Se uma orb tocar num dos AoEs, desaparece e volta a surgir algum tempo depois.
+
+Enquanto destroem o cristal, evitem os projéteis e AoEs. Causam dano considerável, aplicam vários *stacks* de *Confusion* e aumentam um *debuff* semelhante ao do Keep Construct.
+
+<Callout type="warn">
+O tempo para avançar para a plataforma seguinte é limitado.
+</Callout>
+
+<video src="/media/gw2/wing-3/xera/Tower-1-Rifts.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Derangement (debuff)
+
+Os *stacks* de **Derangement** são aplicados pelos pequenos AoEs vermelhos e por Xera, de forma semelhante a Madness no Twisted Castle.
+
+O efeito é mortal aos 99 *stacks*. Embora normalmente não seja problemático, pode aplicar *Fear* aos 80 e lançar um jogador para fora da plataforma.
+
+A cor do cristal sobre a personagem indica aproximadamente a quantidade acumulada: prateado, dourado e vermelho.
+
+Destruir um Bloodstone Shard remove cinco *stacks* de Derangement.
+
+![Indicadores de stacks de Derangement por cima da personagem](/media/gw2/wing-3/xera/Stacks.jpg)
+
+### Plataformas 5 e 3
+
+São necessários três jogadores, um em cada botão ao mesmo tempo, para remover o escudo.
+
+As classes de suporte costumam ocupar os botões para que os DPS destruam o cristal rapidamente.
+
+Ao pisar um botão, acumulam um tipo de *stack* próprio dessa posição. Acima de 10, ficam *downed*; saiam aos oito ou nove *stacks*.
+
+**Nota:** se outro jogador abandonar o botão antes de vocês, saiam também e avancem para a posição seguinte. Como entrou primeiro, terá mais *stacks* e inicia a rotação.
+
+Depois de sair, avancem para o botão seguinte no sentido horário. O novo botão aplica um *stack* diferente. Repitam a rotação até o cristal ser destruído.
+
+<Callout type="warn">
+O tempo para avançar para a plataforma seguinte é limitado.
+</Callout>
+
+<video src="/media/gw2/wing-3/xera/Tower-2-butoes.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+O *squad* volta a reunir-se na plataforma 4 e segue para Xera.
+
+<Callout type="info" title="Info">
+Aproveitem a espera pela plataforma central para fazer *precast* de *boons* e Spirits, incluindo *Might*, *Fury* e *Alacrity*.
+</Callout>
+
+<video src="/media/gw2/wing-3/xera/Tower-Final.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Combate contra Xera
+
+## Fase 1 (100%–50%)
+
+A plataforma está dividida em 12 «fatias», surgindo um Shard por fatia.
+
+O **Gravity Well** segue um padrão de posições que o *squad* deve antecipar. O *tank* precisa de conhecer bem o encontro e posicionar Xera corretamente.
+
+![Padrão de posicionamento do Gravity Well](/media/gw2/wing-3/xera/Gravity-well-placements.png)
+
+### Gravity Well
+
+Trinta segundos depois de entrarem na plataforma, em cada fase, metade da arena fica coberta por uma aura roxa ou rosa.
+
+Quem permanecer na área vê os seus *boons* transformados em *conditions*, recebe 25 *stacks* de Derangement e fica a flutuar durante alguns segundos.
+
+O efeito dura 5 segundos e repete-se a cada 30 segundos, ou 25 segundos na Fase 2.
+
+<video src="/media/gw2/wing-3/xera/Gravity-well.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Confounding Frenzy
+
+Xera executa durante cerca de 3 segundos uma sequência rápida de golpes à sua frente, semelhante a Blurred Frenzy de Mesmer. Cada golpe causa dano considerável e aplica três *stacks* de *Confusion*.
+
+O ataque repete-se a cada 30 segundos.
+
+Apenas o *tank* deve permanecer à frente de Xera. Precisa de *Block*, cura ou remoção de *conditions* para sobreviver. Embora Xera não se desloque durante a animação, acompanha a orientação do *tank*; se este passar pelo grupo, o ataque pode virar-se para o *squad* e provocar um *wipe*.
+
+<video src="/media/gw2/wing-3/xera/Frenzy.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Phantasms e White Mantles
+
+Poucos segundos depois do início, surgem três Phantasms junto a Xera. Quinze segundos mais tarde, aparecem três White Mantles num local aleatório da plataforma; um novo grupo surge a cada 25 segundos.
+
+Ambos causam dano considerável e devem ser eliminados rapidamente. São vulneráveis a *conditions* e CC; agrupem-nos com *pulls* e eliminem-nos com *cleave*.
+
+<Callout type="warn" title="Atenção">
+Estes inimigos, tal como Xera, transformam as suas *conditions* em *boons* se permanecerem dentro do AoE dos cristais.
+</Callout>
+
+### Bloodstone Fragment (acima de 50%)
+
+A cada 10 segundos, surge um Bloodstone na extremidade de uma das divisões da plataforma, começando a sul. Até aos 50%, a rotação decorre no sentido horário.
+
+Cada cristal tem um AoE largo que aumenta os *stacks* de **Derangement** enquanto permanecerem dentro dele. Destruir o cristal remove alguns *stacks*.
+
+O mesmo AoE transforma as *conditions* de Xera e dos inimigos adicionais em *boons*. O *tank* deve posicionar o boss fora destas áreas.
+
+<Callout type="warn" title="Atenção">
+Destruam os Bloodstones quando necessário. Os DPS devem abandonar temporariamente o boss e afastar-se do grupo para os eliminar. A responsabilidade é partilhada entre o *tank*, que posiciona Xera, e os jogadores que limpam os cristais.
+</Callout>
+
+**Nota:** os cristais surgem mais depressa enquanto a breakbar de Xera não for partida. Apliquem CC rapidamente para limitar os cristais e remover a redução de dano do boss.
+
+![Rotação de spawn dos Bloodstone Shards](/media/gw2/wing-3/xera/Shards-Rotation.png)
+
+### Summon Fragment (Defiance Bar: 2000)
+
+**Primeira fase**
+
+Aos 90%, Xera para de atacar, levanta a espada e ganha uma breakbar, com 60 segundos de *cooldown*.
+
+Enquanto a barra estiver ativa, os Bloodstones surgem mais depressa e Xera recebe menos 80% de dano. Todos os jogadores devem contribuir para o CC.
+
+Usar uma ou duas capacidades de CC é preferível a manter a redução de 80% sobre o dano de todo o *squad*.
+
+**Segunda fase**
+
+Na segunda fase, a breakbar mantém um *cooldown* de 60 segundos e pode reaparecer se o DPS for baixo ou determinadas mecânicas demorarem.
+
+O momento exato depende do DPS do grupo e do tempo necessário para regressar dos teleportes dos 40% e 20%.
+
+Xera só recebe a breakbar 10 a 15 segundos depois de os jogadores teleportados destruírem o cristal e regressarem à plataforma.
+
+<video src="/media/gw2/wing-3/xera/Segunda-Fase.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Ambient Magic
+
+Este ataque ocorre uma vez na primeira fase, aos 75%. Um jogador recebe uma Special Action Key (SAK) e surge no ecrã a mensagem «[Nome do jogador] has harnessed ambient magic», seguida de «Xera is poised for a Deadly attack».
+
+Na segunda fase, o ataque repete-se aos 40%, 20% e 10%.
+
+A SAK é uma capacidade de alvo no chão. Coloquem-na sobre o grupo para que todos fiquem protegidos.
+
+Não usem a SAK assim que a recebem, pois a duração do escudo não é suficiente para cobrir o ataque. Aguardem até a segunda mensagem, «Xera is poised for a Deadly attack», desaparecer do ecrã.
+
+Os movimentos bruscos das «Alucinações» no exterior da plataforma também servem de referência para o momento certo.
+
+O ataque mata qualquer jogador que esteja fora do escudo, cuja duração é de 5 segundos. Pode interromper o aparecimento de um Gravity Well, mas não altera a sequência da mecânica.
+
+<video src="/media/gw2/wing-3/xera/Ambient-Magic.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Temporal Shred
+
+O ataque começa 40 segundos depois da entrada na plataforma, tanto na primeira como na segunda fase, e repete-se a cada 50 segundos.
+
+Surge um laser no centro da plataforma que dispara orbs em todas as direções.
+
+Quando atingem um jogador, as orbs explodem, causam dano elevado e aplicam *stacks* de *Confusion*. Criam também pequenos AoEs que aplicam *Slow* e podem fazer flutuar quem lhes tocar. Ser atingido prejudica, por isso, tanto o próprio jogador como o restante *squad*.
+
+Esta mecânica obriga o *squad* a abandonar o centro da plataforma para evitar um *wipe*. Um grupo com DPS elevado pode não chegar a enfrentá-la se atingir rapidamente as percentagens de <GuideTerm href="#ambient-magic" tooltipId="xera-ambient-magic-tooltip" description="Ataque letal em percentagens fixas: um jogador recebe a SAK e coloca o escudo sobre o grupo no momento certo.">Ambient Magic</GuideTerm>.
+
+<video src="/media/gw2/wing-3/xera/Temporal-Shred.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Posicionamento do tank
+
+O posicionamento do *tank* é uma das partes mais exigentes do encontro. Requer conhecimento dos tempos das mecânicas, atenção ao DPS do *squad* e capacidade para reconhecer o momento certo para mover Xera.
+
+O percurso divide-se em duas metades: acima dos 50% e durante os últimos 50%.
+
+Três fatores determinam o movimento do *tank*:
+
+1. Os cristais surgem no sentido horário (CW) durante a primeira metade e no sentido anti-horário (CCW) durante a segunda.
+2. A posição e a sequência dos **Gravity Wells**, cujo padrão muda aos 50%.
+3. O laser e as orbs, que obrigam o grupo a abandonar o centro e deslocar-se para as extremidades.
+
+![Zonas de posicionamento do tank ao longo do encontro](/media/gw2/wing-3/xera/Tanking.jpg)
+
+**Nota:** para uma explicação mais detalhada, consultem o [Xera Guide (PDF)](https://www.raidguides.pt/wp-content/uploads/2021/05/Xera-tanking-guide.pdf).
+
+### Após os 50%
+
+Sigam as setas até às plataformas em redor da arena central. Em cada plataforma, destruam o único Bloodstone Shard e usem a Ley Line para avançar para a seguinte.
+
+As plataformas têm formas diferentes. Usem o *glide* com cuidado para não perder jogadores antes da segunda fase.
+
+Destruir os cristais remove alguns *stacks* de **Derangement**. Evitem os AoEs e usem, de preferência, capacidades à distância. Se isso não for possível, aproximem-se do cristal com cuidado.
+
+**Druids:** evitem gastar Celestial Avatar desnecessariamente. Guardem o *cooldown* para fazer *precast* de *Might* e *Fury* na plataforma 4 antes de regressar ao boss.
+
+**Chronomancers:** evitem usar Continuum Split nesta transição, para não dificultar a partilha de *boons* e o DPS no início da segunda fase.
+
+<video src="/media/gw2/wing-3/xera/Apos-50.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Fase 2 (50%–0%)
+
+Aos 40% e 20%, cinco membros do *squad* são teleportados para uma plataforma exterior.
+
+Enquanto os restantes jogadores continuam a enfrentar Xera, o grupo teleportado executa uma das mecânicas do mini-jogo. Aos 40%, deve empurrar as orbs para os Rifts para remover o escudo.
+
+Aos 20%, executa a mecânica dos botões: são necessárias três pessoas em simultâneo, uma por botão, com rotações sempre no sentido horário.
+
+Em ambos os teleportes, existe um portal que permite a apenas uma pessoa regressar imediatamente a Xera. Normalmente, regressa um *healer*, de preferência o Druid.
+
+Depois de destruírem o cristal, os jogadores regressam automaticamente à plataforma principal e recebem **Hero's Return** durante 10 segundos. Este *buff* impede a aplicação de *stacks* de Derangement e concede imunidade ao CC do Gravity Well.
+
+### Alterações na segunda fase
+
+- O **Gravity Well** ocorre a cada 25 segundos e segue uma nova sequência.
+- **Ambient Magic** ocorre aos 40%, 20% e 10%.
+- Os cristais surgem no sentido anti-horário (CCW).
+
+<video src="/media/gw2/wing-3/xera/TPs.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+![Padrão de posicionamento do Gravity Well na segunda fase](/media/gw2/wing-3/xera/Gravity-well-placements-50.png)
+![Rotação de spawn dos Bloodstone Shards na segunda fase](/media/gw2/wing-3/xera/Shards-Rotation-50.png)
+
+Depois destas alterações, a estrutura mantém-se até ao fim. O sucesso depende sobretudo do posicionamento do grupo e do movimento correto do boss.

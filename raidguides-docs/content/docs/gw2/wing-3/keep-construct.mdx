@@ -1,0 +1,186 @@
+---
+title: Keep Construct
+description: Guia do segundo encounter do Stronghold of the Faithful.
+contentStatus: legacy
+editorialStatus: reviewed
+mechanicsStatus: needs-review
+buildsStatus: outdated
+lastReviewed: 2026-07-20
+phaseCount: 3
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { GuideTerm } from '@/components/guide-term';
+
+| Estatística | Valor |
+| --- | --- |
+| Vida | 55 milhões |
+| Breakbar (Defiance Bar) | 3500 |
+| Tempo para Enrage | 10 minutos |
+
+Este encontro tem um *tank*: o jogador com mais *Toughness* fica fixado pelo Keep Construct (KC).
+
+O encontro tem **três fases**. Em redor da sala existem estátuas essenciais para derrotar o boss: o KC começa cada fase com dois *stacks* de **Xera's Embrace**, que são removidos através dos AoEs deixados pelas estátuas.
+
+<Callout type="info" title="Estrutura de cada fase">
+Atraiam e eliminem duas Mesmer Projections junto ao KC, removam os dois *stacks* de Xera's Embrace, partam a breakbar e concluam a Core Phase para obter o bónus de dano da Burn Phase.
+</Callout>
+
+## Mecânicas principais
+
+### Mesmer Projections
+
+Doze segundos depois do início de cada fase, duas estátuas em redor da sala começam a brilhar. Oito segundos mais tarde, surge uma projeção em cada local. Cada projeção fixa um jogador aleatório do *squad*, exceto o *tank*, e move-se na sua direção. O alvo é identificado por um ícone roxo sobre a personagem e por uma linha que o liga à estátua.
+
+Se o jogador ficar *downed*, a estátua fixa um novo alvo.
+
+Os locais são aleatórios, mas surge sempre uma estátua a este e outra a oeste da sala.
+
+As estátuas são prioritárias. Quando são destruídas, deixam um AoE verde que remove um *stack* de Xera's Embrace. O AoE tem de atingir o KC, pelo que devem eliminar as estátuas junto ao boss.
+
+Depois de removerem os dois *stacks*, surge no boss uma Defiance Bar de 3500. Vinte segundos depois de uma estátua ser eliminada, ou quando duas se unem, surge outra do mesmo lado.
+
+<video src="/media/gw2/wing-3/keep-construct/Mesmer-projections.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Quando duas estátuas se encontram, formam uma única estátua maior, com mais vida e ataques semelhantes, mas com efeitos diferentes.
+
+![Estátua única formada pela junção de duas estátuas](/media/gw2/wing-3/keep-construct/Single-Statue.jpg)
+
+<Callout type="warn" title="Atenção">
+Um dos ataques da estátua unida rouba *boons*, o que pode causar graves problemas ao *squad*, sobretudo com Retaliation. Destruir esta estátua não remove nenhum *stack* do KC. Evitem que as projeções se unam.
+</Callout>
+
+### Tower Drop
+
+Depois de surgir a primeira estátua de cada fase, o KC liga-se a um jogador aleatório através de linhas roxas. Salta alguns segundos depois de o AoE vermelho desaparecer. O ataque pode ser bloqueado ou evitado, e *Stability* impede o *Knockdown*.
+
+No início de cada fase, movam-se do centro da arena em direção à estátua que vai surgir. Isto aproxima o KC da projeção e facilita a remoção de Xera's Embrace.
+
+**Estratégia**
+
+É possível ignorar Xera's Embrace e atingir diretamente as transições dos 66% e 33%, mas a elevada vida do boss torna esta estratégia inviável para a maioria dos grupos. Para a tentar, mantenham o boss no centro, eliminem as estátuas com *cleave* e ataquem até alcançar a percentagem seguinte.
+
+A estratégia habitual é manter o boss perto das estátuas, remover os dois *stacks* e partir a breakbar de 3500. Segue-se a <GuideTerm href="#core-phase" tooltipId="kc-core-phase-tooltip" description="Fase em que o grupo ocupa três círculos verdes e empurra o Construct Core através dos rifts.">Core Phase</GuideTerm>, que permite aplicar ao KC um *debuff* de dano para a <GuideTerm href="#burn-phase" tooltipId="kc-burn-phase-tooltip" description="Janela de dano após a Core Phase, amplificada pelo número de rifts fechados.">Burn Phase</GuideTerm>.
+
+Se não atingirem os 66% ou 33% durante a Burn Phase, repitam a sequência.
+
+Existem ainda duas mecânicas que podem ser ignoradas se partirem rapidamente a breakbar, embora por vezes ocorram em simultâneo.
+
+### Xera's Fury
+
+Trinta segundos depois do início de uma fase, cada jogador recebe um AoE largo que se preenche lentamente.
+
+Ao fim de 10 segundos, o AoE explode e causa 20% da vida máxima por cada área sobreposta, incluindo a do próprio jogador.
+
+<Callout type="info" title="Notas">
+- Podem ignorar esta mecânica se partirem a breakbar antes da explosão.
+- O jogador fixado por uma estátua deve permanecer perto do KC. Quando esta mecânica ocorrer, deve juntar-se ao *tank*.
+</Callout>
+
+<video src="/media/gw2/wing-3/keep-construct/Xera-Fury.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Radiant and Crimson Phantasms
+
+Trinta e cinco segundos depois do início de uma fase, podem surgir em redor da sala dez clones: cinco vermelhos e cinco brancos. Cada jogador recebe sobre a personagem um símbolo correspondente a uma das cores, tal como no final do Escort.
+
+Cada jogador só pode causar dano aos clones com o símbolo da sua cor. O grupo tem 15 segundos para os eliminar.
+
+Cada clone que permanecer vivo causa dano elevado ao grupo.
+
+**Nota:** podem ignorar esta mecânica se partirem a breakbar a tempo.
+
+<Callout type="warn" title="Atenção">
+Se não conseguirem remover os *stacks* de Xera's Embrace e partir a breakbar a tempo, têm de executar esta mecânica.
+</Callout>
+
+<video src="/media/gw2/wing-3/keep-construct/Radiant.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+## Fases após CC
+
+### Core Phase
+
+Quando a breakbar é partida, o KC fica invulnerável e desaparece. Surgem três clones a norte, sudeste e sudoeste, cada um rodeado por um AoE verde que se esvazia gradualmente. Devem existir pelo menos dois jogadores em cada círculo antes de o AoE desaparecer.
+
+Falhar esta mecânica provoca um *wipe*.
+
+**Nota:** jogadores *downed* não contam.
+
+![Core Phase — clones e AoEs verdes nos três pontos da sala](/media/gw2/wing-3/keep-construct/Core-Fase.gif)
+
+Depois dos AoEs, surgem no centro da sala uma orb, o **Construct Core**, e cinco **Unstable Ley Rifts**. A orb não pode ser destruída, mas move-se quando é atingida. Empurrem-na em direção aos Rifts.
+
+![Movimento da orb em direção aos rifts](/media/gw2/wing-3/keep-construct/Orbs.gif)
+
+Cada Rift fechado concede um aumento de 75% no dano durante a Burn Phase seguinte.
+
+Para controlar o movimento da orb, é habitual atribuir a função a um único jogador, geralmente um Druid. Os *pets* podem interferir e devem permanecer em modo passivo.
+
+A orb é afetada por *pulls* e *knockbacks*. Capacidades como **Into the Void** de Mesmer são úteis para a puxar até aos Rifts.
+
+Os restantes jogadores devem permanecer no centro e eliminar as estátuas que continuam a surgir, sem atingir a orb nem dificultar o trabalho do *pusher*.
+
+Durante esta fase, áreas vermelhas em redor da sala reduzem o espaço disponível. Evitem tocar-lhes.
+
+Surgem também clones pequenos, semelhantes às estátuas, que se movem em direção à orb. O *pusher* deve fechar os Rifts antes que um clone lhe toque. Se isso acontecer, a fase termina e o KC reaparece no centro. O *debuff* aplicado depende do número de Rifts fechados: 75% de aumento de dano por *stack*, até cinco. Os clones desaparecem quando o boss regressa.
+
+**Nota:** ajudem o *pusher* se este ganhar *aggro* das estátuas.
+
+### Burn Phase
+
+A Burn Phase começa depois da Core Phase. O número de *stacks* aplicado ao KC depende dos Rifts fechados, permitindo causar até 5 × 75% de dano adicional. Guardem os *cooldowns* ofensivos para maximizar o dano nesta janela.
+
+Façam um bom *precast* de *boons* antes de o boss reaparecer.
+
+Sigil of Impact e *traits* que aumentem o dano contra alvos controlados são úteis, pois o boss permanece em *stun* durante 20 segundos.
+
+As estátuas continuam a surgir. Mantenham-se no centro, atraiam-nas para a *hitbox* do boss e eliminem-nas através do *cleave* do *squad*.
+
+Ao atingir 66% ou 33%, o boss passa para a fase seguinte.
+
+![Burn Phase](/media/gw2/wing-3/keep-construct/Burn-Phase-1.gif)
+
+### Magic Blast
+
+Esta mecânica ocorre apenas aos 66% e 33%. O KC levanta os braços e aparece a mensagem «The Keep Construct is attracting energy to unleash Magic Blast». Cada jogador recebe um símbolo vermelho ou branco e começam a surgir orbs dessas cores em direção ao boss.
+
+Intercetem apenas as orbs da vossa cor.
+
+Mantenham-se perto do boss para controlar as orbs e receber cura e *boons*. O KC ganha um *stack* por cada orb que o alcança; quanto mais *stacks* tiver, maior será o dano da explosão no final da fase. O máximo é 35.
+
+Cada orb causa 3% da vida máxima do jogador. O dano não pode ser bloqueado nem evitado.
+
+<Callout type="warn" title="Importante">
+Distribuam-se pelo perímetro do boss e mantenham posições fixas. Correr à volta do KC para perseguir orbs deixa zonas descobertas e dificulta a mecânica.
+</Callout>
+
+![Recolha de orbs vermelhas e brancas junto ao boss](/media/gw2/wing-3/keep-construct/Orbs-collect.gif)
+
+### Phantasmal Blades
+
+A partir dos 75%, o KC executa uma capacidade sem se mover. Surge à sua volta uma área em forma de anel e vários triângulos que rodam no sentido anti-horário (CCW).
+
+O ataque dura cerca de 10 segundos, causa dano moderado e aplica *stacks* de *Confusion* e *Torment*. Entrar no anel aplica também estas *conditions*.
+
+Por cada intervalo de 25% de vida, o ataque ganha um triângulo adicional. Acima dos 33%, repete-se aproximadamente a cada 40 segundos.
+
+Não entrem no anel; conseguem atacar sem permanecer dentro da *hitbox*. Os *healers* devem fornecer remoção de *conditions* adicional.
+
+<video src="/media/gw2/wing-3/keep-construct/Phantasmal-blades.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Hail of Fury
+
+O KC salta e desaparece. Enquanto estiver fora da arena, surgem vários AoEs que causam dano moderado e *Stun*.
+
+**Nota:** este ataque ocorre após os 33%.
+
+<Callout type="warn" title="Atenção">
+O jogador fixado deve permanecer no local de onde o KC saltou. Embora o boss esteja invisível, os *stacks* podem ser removidos: eliminem as duas estátuas de modo que os AoEs verdes atinjam esse local. O KC reaparece sem os *stacks* e com a Defiance Bar ativa.
+</Callout>
+
+<video src="/media/gw2/wing-3/keep-construct/Hail-Fury.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Este ataque ocorre abaixo dos 33%, depois de **Tower Drop**, e é seguido por **Phantasmal Blades**.
+
+Depois, repitam as mecânicas anteriores, agora incluindo Hail of Fury. O ponto essencial é remover corretamente os *stacks* enquanto o KC está invisível.
+
+Como o KC não pode sofrer dano enquanto está ausente, chega à Burn Phase com mais vida. É aconselhável que o *pusher* feche um Rift adicional para compensar.

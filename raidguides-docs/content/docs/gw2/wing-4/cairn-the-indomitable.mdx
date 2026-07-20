@@ -1,0 +1,175 @@
+---
+title: Cairn the Indomitable
+description: Guia do primeiro encontro de Bastion of the Penitent.
+contentStatus: legacy
+editorialStatus: reviewed
+lastReviewed: 2026-07-20
+mechanicsStatus: needs-review
+buildsStatus: outdated
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { GuideTerm } from '@/components/guide-term';
+
+## Estatísticas
+
+| Vida | Tempo até ao enrage |
+| --- | --- |
+| 20 milhões | 8 minutos |
+
+## Preparação e posicionamento
+
+Sigam em direção à cascata e usem o *glider* para chegar à plataforma onde decorre o combate. O Cairn aparece assim que a Glenna se aproxima. Se não falarem com a Glenna antes de todos estarem posicionados, conseguem começar o encontro já na plataforma; este método funciona apenas uma vez.
+
+Ao passarem pela cascata, ganham acesso à SAK **Celestial Dash**, uma habilidade de movimento a longa distância que também permite evadir ataques. Usem-na para se deslocarem ou regressarem ao boss após um teleporte.
+
+O Cairn pode ter um *tank/kiter*: o jogador mais afastado fica com o *aggro*, define a posição do boss e determina a direção do **Meteor Swarm** e dos restantes ataques.
+
+Durante o encontro, terão também de lidar com o *debuff* **Unseen Burden**. Este efeito reduz a velocidade de movimento em 1% por cada *stack*, até um máximo de 99. Mesmo sob este efeito, podem usar a SAK para se deslocarem.
+
+<Callout type="info" title="Em resumo">
+- Permaneçam dentro do símbolo para evitar o **Meteor Swarm**.
+- Evitem os *rifts* azuis do **Displacement**.
+- Quem tiver **Shared Agony** deve afastar-se do grupo sem sair do símbolo.
+- Identifiquem corretamente os verdes do **Spatial Manipulation**, **Energy Surge** e **Orbital Sweep**.
+</Callout>
+
+## Sequência básica de ataques automáticos
+
+### Impact + Displacement
+
+Quando o Cairn dá um soco, abrem-se três *rifts*. Três segundos depois, quem estiver dentro do AoE é teleportado para a berma da plataforma e sofre dano considerável. Ao passar a ser, em princípio, o jogador mais afastado, fica com o *aggro* do boss até regressar, a menos que exista alguém ainda mais longe.
+
+Podem usar a SAK para regressar ao grupo. É possível evadir ou bloquear os *rifts*, mas é preferível sair do AoE com um *sidestep*.
+
+<video src="/media/gw2/wing-4/cairn-the-indomitable/Displacement.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+### Impact + Meteor Swarm
+
+Quando o Cairn dá o segundo soco, lança meteoros na direção do *tank*. Estes meteoros causam dano considerável e *knockback*. Aparecem ligeiramente afastados do boss, pelo que os jogadores próximos não são atingidos.
+
+<video src="/media/gw2/wing-4/cairn-the-indomitable/Impact.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Os meteoros são projéteis e não devem ser refletidos. Se forem refletidos, os jogadores junto ao boss podem sofrer o dano e o *knockback* de vários projéteis e ser apanhados por um **Displacement**. Evitem, por isso, usar *reflects* neste encontro.
+
+<Callout type="error" title="Permaneçam dentro do símbolo">
+  Fiquem dentro do símbolo para não serem atingidos pelo **Meteor Swarm**.
+</Callout>
+
+<Callout type="warn" title="Shared Agony">
+  Se tiverem *agony*, permaneçam dentro do símbolo, mas afastados do grupo.
+</Callout>
+
+<Callout type="info" title="Símbolo invisível">
+  Se não conseguirem ver o símbolo, ativem a opção **Shaders**.
+</Callout>
+
+Permanecer dentro do símbolo evita o *knockback*. Quem tiver *agony* já sofre dano passivo, pelo que deve evitar dano adicional desnecessário.
+
+A sequência ao longo do encontro é: **Impact + Displacement → Impact → Meteor Swarm**.
+
+## Mecânicas adicionais
+
+### Shared Agony
+
+Esta mecânica é essencial para o sucesso do encontro.
+
+Começa aos 7:37 e é atribuída ao jogador mais afastado do Cairn, exceto se esse jogador já tiver *agony*.
+
+Quem receber *agony* fica com um AoE durante 60 segundos e perde 10% da vida máxima a cada três segundos. Por este motivo, os *healers/supports* costumam posicionar-se de forma a receber o *debuff*.
+
+<Callout type="warn" title="Dano em corrente">
+  A *agony* afeta até três jogadores dentro do AoE: o jogador mais próximo do centro sofre 25% de dano com base na vida máxima, o segundo sofre 50% e o terceiro 75%.
+</Callout>
+
+Por este motivo, quem tiver *agony* deve afastar-se do grupo, mas permanecer dentro do símbolo. Como será provavelmente o jogador mais afastado e ficará com o *aggro*, deve evitar também o dano do **Meteor Swarm**.
+
+Durante o <GuideTerm href="#spatial-manipulation" tooltipId="cairn-spatial-manipulation-tooltip" description="Sequência de AoEs verdes: o grupo escolhe uma área segura, enquanto jogadores com agony ocupam áreas diferentes.">Spatial Manipulation</GuideTerm>, quem tiver *agony* deve procurar um AoE verde diferente daquele que o resto do grupo escolheu, evitando *downs* ou um *wipe*.
+
+A *agony* aparece a cada 20 segundos e dura 60 segundos. Em algum momento do encontro, três jogadores terão este efeito em simultâneo.
+
+Jogadores em *downstate* não recebem dano da *agony*. Da mesma forma, jogadores com *agony* que fiquem em *downstate* deixam de causar dano através deste efeito.
+
+Se esta mecânica for bem executada, o resto do encontro torna-se muito mais simples.
+
+<video src="/media/gw2/wing-4/cairn-the-indomitable/Stack-1.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+O posicionamento é essencial: se tiverem *agony*, evitem os *rifts* azuis e o **Meteor Swarm**, permanecendo sempre dentro do símbolo.
+
+### Spatial Manipulation
+
+Pouco depois do início do combate, o Cairn começa a carregar um ataque enquanto aparecem círculos verdes de vários tamanhos na plataforma.
+
+O Cairn não se move do centro da plataforma durante este ataque.
+
+Os AoEs verdes protegem os jogadores do dano. Alguns exigem um número mínimo de pessoas; os círculos brancos por cima de cada AoE indicam quantos jogadores são necessários para bloquear o ataque.
+
+Este ataque causa dano elevado, aplica 25 *stacks* de **Unseen Burden** e faz os jogadores flutuar, deixando-os vulneráveis se tiverem um *rift* azul por baixo.
+
+Esta mecânica pode ser ignorada se o grupo tiver cura suficiente e *stability*, geralmente fornecida pelo HFB através da habilidade **Stand Your Ground!**.
+
+<video src="/media/gw2/wing-4/cairn-the-indomitable/Spatial.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+O ataque repete-se a cada 30 segundos, embora possa variar consoante a vida atual do boss. O padrão dos verdes também muda de acordo com essa percentagem.
+
+Os círculos pequenos requerem apenas uma pessoa e devem ser ocupados por quem tiver *agony*.
+
+Não confundam este ataque com o [Energy Surge](#energy-surge) ou com os verdes que surgem após o [Orbital Sweep](#orbital-sweep): nesses casos, não existe um número mínimo de jogadores por AoE.
+
+![Padrão do Spatial Manipulation](/media/gw2/wing-4/cairn-the-indomitable/Spatial-Pattern.png)
+
+### Energy Surge
+
+O Cairn sai do centro da plataforma numa direção definida e causa *knockback* a quem estiver à sua frente. A cada salto, deixa um círculo verde médio no trajeto. Quando regressa ao centro, carrega um ataque de forma semelhante ao **Spatial Manipulation**.
+
+Até aos 50% de vida, efetua seis saltos e deixa um verde no centro da plataforma. Abaixo dos 50%, deixa de existir um verde no centro.
+
+<video src="/media/gw2/wing-4/cairn-the-indomitable/energy-Surge.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Os AoEs deixados depois de o Cairn sair do centro não exigem um número mínimo de jogadores; servem apenas para bloquear o dano.
+
+Esta mecânica pode ser ignorada se o grupo tiver cura suficiente e *stability*, geralmente fornecida pelo HFB através da habilidade **Stand Your Ground!**.
+
+![Padrão do Energy Surge](/media/gw2/wing-4/cairn-the-indomitable/Energy-Surge-Pattern.png)
+
+### Orbital Sweep
+
+Uma seta aparece no chão antes de um ataque giratório no sentido contrário ao dos ponteiros do relógio (CCW). O Cairn estende o braço ao longo da plataforma e causa *knockback*. Façam *dodge* no sentido oposto para evitar um segundo golpe.
+
+Depois do ataque, aparecem círculos verdes grandes semelhantes aos das mecânicas anteriores, mas sem um número mínimo de jogadores.
+
+Esta mecânica pode ser ignorada se o grupo tiver cura suficiente e *stability*, geralmente fornecida pelo HFB através da habilidade **Stand Your Ground!**.
+
+<video src="/media/gw2/wing-4/cairn-the-indomitable/Orbital-Sweep.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+O posicionamento dos AoEs verdes e o local onde o boss inicia a habilidade são definidos pela percentagem de vida atual.
+
+![Padrão do Orbital Sweep](/media/gw2/wing-4/cairn-the-indomitable/Orbital-Sweep-Pattern.png)
+
+### Padrão geral do encontro
+
+Depois do primeiro **Spatial Manipulation**, o ciclo é aproximadamente o seguinte:
+
+**Spatial Manipulation → Energy Surge → Orbital Sweep**
+
+Em cada intervalo de 25% da vida do boss, o padrão de ataques reinicia. Se o grupo for suficientemente rápido, pode evitar algumas mecânicas e nem chegar a ver o **Energy Surge** ou o **Orbital Sweep**.
+
+Aos últimos 25% de HP é adicionada uma nova mecânica: **Gravity Wave**.
+
+<Callout type="info" title="Como distinguir os verdes">
+- **Spatial Manipulation:** o boss permanece no centro a carregar; existe um número mínimo de jogadores por AoE.
+- **Energy Surge:** o boss sai do centro e salta enquanto deixa verdes; não existe um número mínimo de jogadores.
+- **Orbital Sweep:** o boss roda o braço pela plataforma e depois carrega; os AoEs grandes não exigem um número mínimo de jogadores.
+</Callout>
+
+### Gravity Wave
+
+O Cairn soca o chão e lança ondas de cristal do centro para o exterior da plataforma, causando dano elevado e *knockback*.
+
+O ataque tem três ondas, e uma delas pode empurrar o jogador na direção da seguinte. Pode ser evitado permanecendo perto do Cairn.
+
+<video src="/media/gw2/wing-4/cairn-the-indomitable/Gravity-Wave.mp4" controls muted loop playsInline className="w-full rounded-lg" />
+
+Nos últimos 25% de vida, o **Gravity Wave** é acrescentado ao padrão do boss:
+
+**Spatial Manipulation → Energy Surge → Orbital Sweep → Gravity Wave**

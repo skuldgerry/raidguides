@@ -1,0 +1,24 @@
+# Dependencies and framework output
+**/node_modules/
+**/.next/
+**/.next-verify/
+**/.source/
+**/out/
+
+# Local configuration and logs
+**/.env
+**/.env*.local
+**/*.log
+**/*.tsbuildinfo
+.DS_Store
+Thumbs.db
+/.agents/
+/.codex/
+/.tools/
+/.repo-state/
+
+# Source material and historical dumps kept outside the public repository
+/fumadocs Auto Install/
+/raidguidespt_wordpress/
+/raidguidespt.tar.gz
+/repro-Dockerfile

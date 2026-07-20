@@ -1,0 +1,61 @@
+import { source } from '@/lib/source';
+import {
+  DocsPage,
+  DocsBody,
+  DocsTitle,
+  DocsDescription,
+} from 'fumadocs-ui/page';
+import { notFound } from 'next/navigation';
+import { getMDXComponents } from '@/mdx-components';
+import { PageActions } from '../page-actions';
+import { GuideStatus } from '@/components/guide-status';
+
+export default async function Page(props: {
+  params: Promise<{ slug?: string[] }>;
+}) {
+  const params = await props.params;
+  const page = source.getPage(params.slug);
+  if (!page) notFound();
+
+  const MDX = page.data.body;
+  const markdownUrl = `${page.url}.md`;
+  const sourcePath = params.slug?.length === 1
+    ? `${params.slug[0]}/index.mdx`
+    : `${params.slug?.join('/')}.mdx`;
+
+  return (
+    <DocsPage toc={page.data.toc} full={page.data.full}>
+      <DocsTitle>{page.data.title}</DocsTitle>
+      <DocsDescription>{page.data.description}</DocsDescription>
+      <GuideStatus
+        status={page.data.contentStatus}
+        editorialStatus={page.data.editorialStatus}
+        lastReviewed={page.data.lastReviewed}
+        mechanicsStatus={page.data.mechanicsStatus}
+        buildsStatus={page.data.buildsStatus}
+        phaseCount={page.data.phaseCount}
+      />
+      <PageActions markdownUrl={markdownUrl} sourcePath={sourcePath} />
+      <DocsBody>
+        <MDX components={getMDXComponents()} />
+      </DocsBody>
+    </DocsPage>
+  );
+}
+
+export async function generateStaticParams() {
+  return source.generateParams();
+}
+
+export async function generateMetadata(props: {
+  params: Promise<{ slug?: string[] }>;
+}) {
+  const params = await props.params;
+  const page = source.getPage(params.slug);
+  if (!page) notFound();
+
+  return {
+    title: page.data.title,
+    description: page.data.description,
+  };
+}

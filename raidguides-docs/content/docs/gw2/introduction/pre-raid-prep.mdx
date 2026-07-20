@@ -1,0 +1,94 @@
+---
+title: Preparação Pré-Raid
+description: Builds, benchmarks e as ferramentas que precisas de configurar antes de entrar numa raid.
+contentStatus: legacy
+editorialStatus: reviewed
+lastReviewed: '2026-07-20'
+buildsStatus: outdated
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Steps, Step } from 'fumadocs-ui/components/steps';
+import { Cards, Card } from 'fumadocs-ui/components/card';
+
+Antes de entrares numa raid, há três aspetos a preparar: a tua **build**, a tua **rotação** e as **ferramentas** que te ajudam a avaliar e melhorar ambas. Esta página explica os três.
+
+## Builds e benchmarks
+
+Para builds e informação específica da tua classe, consulta:
+
+<Cards>
+  <Card title="Snowcrows" href="https://snowcrows.com/" description="Builds testadas e otimizadas por raid e encontro." />
+  <Card title="Lucky Noobs" href="https://lucky-noobs.com/" description="Alternativa com guias de build por classe." />
+</Cards>
+
+Em qualquer um dos sites, consulta a secção **Class Guide** e, depois, as **Benchmarks**. Aí encontras o valor máximo de dano que a tua classe consegue atingir no golem. Usa-o como referência e tenta chegar a pelo menos **80%** desse valor antes de entrares numa raid.
+
+<Callout type="info">
+  Cada classe pode ter várias builds, consoante o boss ou o encontro. Algumas mecânicas favorecem Power DPS ou Condi DPS. Se queres completar todas as wings sem ficares limitado a parte das raids, vale a pena investires em builds variadas.
+</Callout>
+
+É recomendável seres versátil: prepara uma build de **Power DPS**, uma de **Condi DPS** e uma de **Support/Heal**. Quanto melhor conheceres as três funções, mais fácil será adaptares-te às necessidades do squad.
+
+Não te esqueças também da *food* e dos *enhancements* adequados à tua classe e função. O site de builds que escolheres inclui essa informação.
+
+## Treinar antes da raid
+
+<Callout type="warn" title="Importante">
+  Treina as tuas rotações na **Special Training Area** antes de ires para a raid a sério.
+</Callout>
+
+<Steps>
+<Step>
+  Vai ao **Aerodrome**, em Lion's Arch.
+</Step>
+<Step>
+  Abre um squad e coloca-o em **Raid Mode**. Qualquer pessoa pode fazê-lo, mesmo sem a tag de commander.
+
+  Waypoint: `[&BCAJAAA=]`
+</Step>
+<Step>
+  No golem de treino, aplica as *conditions*, os boons e os *class buffs* necessários — por exemplo, Might, Fury, Alacrity, Quickness, Spotter, Banners e Druid Spirits.
+</Step>
+</Steps>
+
+## ArcDPS: medir o teu desempenho
+
+[ArcDPS](https://www.deltaconnected.com/arcdps/x64/) é um addon que apresenta estatísticas em tempo real, como DPS e *boon uptime*, e permite gravar logs dos encontros. É uma das ferramentas mais úteis para identificares erros e melhorares o teu desempenho.
+
+<Steps>
+<Step>
+  Descarrega o ficheiro `d3d9.dll` a partir do [site oficial do ArcDPS](https://www.deltaconnected.com/arcdps/x64/) ou utiliza o Addon Manager indicado mais abaixo.
+</Step>
+<Step>
+  Fecha o Guild Wars 2 se estiver aberto, e coloca o `d3d9.dll` na pasta `bin64` da tua instalação do jogo.
+</Step>
+<Step>
+  Volta a abrir o jogo. Usa **Alt + Shift + T** para abrir o menu do ArcDPS e seleciona **Area Stats** para veres as estatísticas em tempo real.
+</Step>
+</Steps>
+
+<Callout type="error" title="Nota">
+  Se surgirem erros no Guild Wars 2 depois de uma atualização, o ArcDPS pode estar desatualizado e a interferir com o jogo. Apaga o `d3d9.dll` da pasta `bin64`, verifica no site oficial se existe uma versão mais recente, comparando a data do ficheiro, e instala-a.
+</Callout>
+
+### Gravar e analisar logs
+
+Dentro das opções do ArcDPS, vai a **Logging** e ativa **Save EVTC logs after encounters**. Depois de cada encounter, o log fica guardado com um nome no formato `AAAAMMDD-HHMMSS` (por exemplo `20200715-223248`), o que facilita encontrar o log certo.
+
+Para analisar um log:
+
+<Cards>
+  <Card title="dps.report" href="https://dps.report/" description="Envia o teu ficheiro de log EVTC e recebe uma análise detalhada do encontro." />
+  <Card title="GW2 Scratch Log Manager" href="https://gw2scratch.com/tools/manager" description="Ferramenta alternativa para organizar e consultar os teus logs mais facilmente." />
+</Cards>
+
+Os logs ajudam-te a melhorar o *boon uptime*, o DPS e a rotação, mas também a detetar erros que não são evidentes apenas através dos números.
+
+## Manter os addons atualizados
+
+Existe um [Addon Manager](https://github.com/fmmmlee/GW2-Addon-Manager/releases/tag/v1.3.0) que facilita a instalação e atualização de vários addons (incluindo o ArcDPS) de uma só vez.
+
+<Callout type="warn" title="Aviso">
+  Se já tinhas instalado o ArcDPS manualmente antes de usares o Addon Manager, as configurações anteriores não são mantidas automaticamente. Terás de voltar a configurá-lo.
+</Callout>

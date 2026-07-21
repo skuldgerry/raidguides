@@ -1,7 +1,7 @@
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { Banner } from 'fumadocs-ui/components/banner';
 import type { CSSProperties, ReactNode } from 'react';
-import { AlertTriangleIcon, MessageCircleIcon } from 'lucide-react';
+import { AlertTriangleIcon, MessageCircleIcon, ShieldCheckIcon } from 'lucide-react';
 import { source } from '@/lib/source';
 import { cn } from '@/lib/cn';
 import { buttonVariants } from '@/components/ui/button';
@@ -13,6 +13,7 @@ import { GameThemeWrapper } from './game-theme';
 // `source` is still needed for `tree={source.pageTree}` below.
 const DISCORD_URL = 'https://discord.gg/nqqrpwrcpM';
 const GITHUB_URL = 'https://github.com/skuldgerry/raidguides';
+const PRIVACY_URL = 'https://www.raidguides.pt/privacy/';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -48,6 +49,14 @@ export default function Layout({ children }: { children: ReactNode }) {
             url: GITHUB_URL,
             external: true,
             icon: <GitHubIcon className="size-4" />,
+          },
+          {
+            type: 'icon',
+            label: 'Privacidade',
+            text: 'Privacidade',
+            url: PRIVACY_URL,
+            external: true,
+            icon: <ShieldCheckIcon className="size-4" />,
           },
         ]}
         nav={{

@@ -17,8 +17,6 @@ Thumbs.db
 /.tools/
 /.repo-state/
 
-# Source material and historical dumps kept outside the public repository
-/fumadocs Auto Install/
-/raidguidespt_wordpress/
-/raidguidespt.tar.gz
-/repro-Dockerfile
+# Local transfer archives and historical dumps must never be published
+/*.rar
+/*.tar.gz

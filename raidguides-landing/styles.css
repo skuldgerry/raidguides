@@ -595,6 +595,127 @@ svg {
   height: 1rem;
 }
 
+.legal-page {
+  min-height: calc(100vh - 8.5rem);
+  padding: clamp(4rem, 9vw, 7rem) 0;
+  background:
+    radial-gradient(circle at 78% 5%, rgba(190, 24, 39, 0.14), transparent 28rem),
+    linear-gradient(180deg, rgba(24, 24, 27, 0.4), transparent 18rem),
+    #09090b;
+}
+
+.legal-shell {
+  width: min(800px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.legal-kicker {
+  margin-bottom: 1rem;
+  color: #fca5a5;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.legal-page h1 {
+  max-width: 13ch;
+  color: white;
+  font-size: clamp(2.7rem, 7vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.legal-lead {
+  max-width: 65ch;
+  margin-top: 1.35rem;
+  color: rgba(244, 244, 245, 0.72);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.legal-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 2.5rem 0 3rem;
+}
+
+.legal-summary div {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 0.85rem;
+  background: rgba(24, 24, 27, 0.72);
+}
+
+.legal-summary strong,
+.legal-summary span {
+  display: block;
+}
+
+.legal-summary strong {
+  color: white;
+  font-size: 0.88rem;
+}
+
+.legal-summary span {
+  margin-top: 0.35rem;
+  color: rgba(244, 244, 245, 0.56);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.legal-content {
+  color: rgba(244, 244, 245, 0.7);
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.legal-content section {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.legal-content h2 {
+  margin: 0 0 0.8rem;
+  color: white;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.legal-content p + p,
+.legal-content ul + p,
+.legal-content p + ul {
+  margin-top: 0.85rem;
+}
+
+.legal-content ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.legal-content li + li {
+  margin-top: 0.45rem;
+}
+
+.legal-content a {
+  color: #fca5a5;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.legal-updated {
+  margin-top: 2.5rem;
+  color: rgba(244, 244, 245, 0.42);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 700px) {
+  .legal-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-grid,
   .status-grid {

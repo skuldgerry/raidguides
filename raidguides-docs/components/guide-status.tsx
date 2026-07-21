@@ -2,22 +2,15 @@ import { AlertTriangleIcon, CalendarCheckIcon, ConstructionIcon } from 'lucide-r
 
 type GuideStatusProps = {
   status: 'current' | 'legacy' | 'coming-soon';
-  editorialStatus?: 'reviewed' | 'needs-review';
   lastReviewed?: string;
   mechanicsStatus?: 'reviewed' | 'generally-valid' | 'needs-review';
   buildsStatus?: 'reviewed' | 'outdated' | 'needs-review';
-  phaseCount?: number;
 };
 
 const mechanicsLabels = {
   reviewed: 'Mecânicas revistas',
   'generally-valid': 'Mecânicas geralmente válidas',
   'needs-review': 'Mecânicas por rever',
-} as const;
-
-const editorialLabels = {
-  reviewed: 'Texto revisto',
-  'needs-review': 'Texto por rever',
 } as const;
 
 const buildsLabels = {
@@ -37,22 +30,18 @@ function formatReviewDate(date: string) {
 
 export function GuideStatus({
   status,
-  editorialStatus,
   lastReviewed,
   mechanicsStatus,
   buildsStatus,
-  phaseCount,
 }: GuideStatusProps) {
   if (status === 'current') return null;
 
   const isComingSoon = status === 'coming-soon';
   const Icon = isComingSoon ? ConstructionIcon : AlertTriangleIcon;
   const details = [
-    editorialStatus ? editorialLabels[editorialStatus] : null,
     mechanicsStatus ? mechanicsLabels[mechanicsStatus] : null,
     buildsStatus ? buildsLabels[buildsStatus] : null,
-    phaseCount ? `${phaseCount} ${phaseCount === 1 ? 'fase' : 'fases'}` : null,
-  ].filter((detail): detail is string => detail !== null);
+  ].filter((detail) => detail !== null);
 
   return (
     <aside
@@ -82,7 +71,7 @@ export function GuideStatus({
           {lastReviewed ? (
             <p className="mt-2 mb-0 flex items-center gap-1.5 text-xs text-fd-muted-foreground">
               <CalendarCheckIcon aria-hidden="true" className="size-3.5" />
-              Última revisão: {formatReviewDate(lastReviewed)}
+              Última revisão de conteúdo: {formatReviewDate(lastReviewed)}
             </p>
           ) : null}
         </div>

@@ -1,12 +1,13 @@
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { Banner } from 'fumadocs-ui/components/banner';
 import type { CSSProperties, ReactNode } from 'react';
-import { AlertTriangleIcon, GithubIcon, MessageCircleIcon } from 'lucide-react';
+import { AlertTriangleIcon, MessageCircleIcon } from 'lucide-react';
 import { source } from '@/lib/source';
 import { cn } from '@/lib/cn';
 import { buttonVariants } from '@/components/ui/button';
 import { AISearch, AISearchPanel, AISearchTrigger } from '@/components/ai/search';
 import { DiscordIcon } from '@/components/discord-icon';
+import { GitHubIcon } from '@/components/github-icon';
 import { GameThemeWrapper } from './game-theme';
 
 // `source` is still needed for `tree={source.pageTree}` below.
@@ -46,7 +47,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             text: 'GitHub',
             url: GITHUB_URL,
             external: true,
-            icon: <GithubIcon className="size-4" />,
+            icon: <GitHubIcon className="size-4" />,
           },
         ]}
         nav={{

@@ -4,6 +4,8 @@ import { z } from 'zod';
 
 const raidGuideSchema = pageSchema.extend({
   contentStatus: z.enum(['current', 'legacy', 'coming-soon']),
+  // Kept as optional retrieval metadata, but deliberately not displayed in
+  // the factual content-status notice.
   editorialStatus: z.enum(['reviewed', 'needs-review']).optional(),
   lastReviewed: z
     .string()

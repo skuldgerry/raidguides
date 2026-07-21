@@ -7,8 +7,8 @@ import {
   Copy,
   ExternalLink,
   FileText,
-  Github,
 } from 'lucide-react';
+import { GitHubIcon } from '@/components/github-icon';
 
 // Self-built "Page Actions" bar, styled after Fumadocs' own docs site:
 // a "Copy Markdown" button plus a dropdown with links that hand the page's
@@ -74,7 +74,7 @@ export function PageActions({
     {
       label: 'Open in GitHub',
       href: `https://github.com/skuldgerry/raidguides/blob/main/raidguides-docs/content/docs/${sourcePath}`,
-      icon: Github,
+      icon: GitHubIcon,
     },
   ];
 

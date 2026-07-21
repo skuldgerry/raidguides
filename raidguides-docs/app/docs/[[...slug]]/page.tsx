@@ -29,11 +29,9 @@ export default async function Page(props: {
       <DocsDescription>{page.data.description}</DocsDescription>
       <GuideStatus
         status={page.data.contentStatus}
-        editorialStatus={page.data.editorialStatus}
         lastReviewed={page.data.lastReviewed}
         mechanicsStatus={page.data.mechanicsStatus}
         buildsStatus={page.data.buildsStatus}
-        phaseCount={page.data.phaseCount}
       />
       <PageActions markdownUrl={markdownUrl} sourcePath={sourcePath} />
       <DocsBody>

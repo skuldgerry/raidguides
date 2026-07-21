@@ -2,6 +2,6 @@
 
 Documentação com guias em Português para as primeiras quatro wings de raids de Guild Wars 2.
 
-## Licença
+## License
 
-O código, a documentação e os conteúdos deste repositório estão disponíveis apenas para consulta. Todos os direitos são reservados. Consulta [LICENSE.md](./LICENSE.md).
+The source code, documentation, and other content in this repository are made available for viewing only. All rights are reserved. See [LICENSE.md](./LICENSE.md).

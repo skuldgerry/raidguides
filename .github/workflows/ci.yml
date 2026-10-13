@@ -80,7 +80,8 @@ jobs:
           docker run --detach --rm --name "$container" \
             -p "127.0.0.1:18080:${CONTAINER_PORT}" "raidguides-${APP}:ci"
           base="http://127.0.0.1:18080"
-          curl --fail --silent --show-error --retry 20 --retry-connrefused --retry-delay 1 "$base/" -o /tmp/raidguides-home.html
+          curl --fail --silent --show-error --connect-timeout 2 --max-time 5 \
+            --retry 20 --retry-all-errors --retry-delay 1 "$base/" -o /tmp/raidguides-home.html
           if [ "$APP" = docs ]; then
             curl --fail --silent --show-error "$base/docs/gw2/wing-1/vale-guardian" -o /tmp/raidguides-guide.html
             grep -q 'Vale Guardian' /tmp/raidguides-guide.html

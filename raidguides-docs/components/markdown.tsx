@@ -16,6 +16,7 @@ import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { visit } from 'unist-util-visit';
 import type { ElementContent, Root, RootContent } from 'hast';
+import { rehypeDisableLinks } from '@/lib/ai/citations';
 
 export interface Processor {
   process: (content: string) => Promise<ReactNode>;
@@ -54,8 +55,9 @@ export function rehypeWrapWords() {
   };
 }
 
-function createProcessor(): Processor {
+function createProcessor(allowLinks = true): Processor {
   const processor = remark().use(remarkGfm).use(remarkRehype).use(rehypeWrapWords);
+  if (!allowLinks) processor.use(rehypeDisableLinks);
 
   return {
     async process(content) {
@@ -95,22 +97,24 @@ function Pre(props: ComponentProps<'pre'>) {
 }
 
 const processor = createProcessor();
+const answerProcessor = createProcessor(false);
 
-export function Markdown({ text }: { text: string }) {
+export function Markdown({ text, allowLinks = true }: { text: string; allowLinks?: boolean }) {
   const deferredText = useDeferredValue(text);
 
   return (
     <Suspense fallback={<p className="invisible">{text}</p>}>
-      <Renderer text={deferredText} />
+      <Renderer text={deferredText} allowLinks={allowLinks} />
     </Suspense>
   );
 }
 
 const cache = new Map<string, Promise<ReactNode>>();
 
-function Renderer({ text }: { text: string }) {
-  const result = cache.get(text) ?? processor.process(text);
-  cache.set(text, result);
+function Renderer({ text, allowLinks }: { text: string; allowLinks: boolean }) {
+  const key = `${allowLinks ? 'links' : 'text'}:${text}`;
+  const result = cache.get(key) ?? (allowLinks ? processor : answerProcessor).process(text);
+  cache.set(key, result);
 
   return use(result);
 }

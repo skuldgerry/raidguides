@@ -18,6 +18,7 @@ import { buttonVariants } from '../ui/button';
 import { useChat, type UseChatHelpers } from '@ai-sdk/react';
 import { DefaultChatTransport, type UIMessage } from 'ai';
 import { Markdown } from '../markdown';
+import type { RetrievedSource } from '@/lib/ai/citations';
 
 export type ChatUIMessage = UIMessage<
   never,
@@ -25,6 +26,7 @@ export type ChatUIMessage = UIMessage<
     client: {
       location: string;
     };
+    sources: RetrievedSource[];
   }
 >;
 
@@ -264,6 +266,9 @@ const roleName: Record<string, string> = {
 
 function Message({ message, ...props }: { message: ChatUIMessage } & ComponentProps<'div'>) {
   let markdown = '';
+  const sources = message.role === 'assistant'
+    ? message.parts.find((part) => part.type === 'data-sources')?.data ?? []
+    : [];
 
   for (const part of message.parts ?? []) {
     if (part.type === 'text') {
@@ -282,8 +287,22 @@ function Message({ message, ...props }: { message: ChatUIMessage } & ComponentPr
         {roleName[message.role] ?? 'unknown'}
       </p>
       <div className="prose text-sm">
-        <Markdown text={markdown} />
+        <Markdown text={markdown} allowLinks={message.role !== 'assistant'} />
       </div>
+      {sources.length > 0 && (
+        <nav aria-label="Guias consultadas" className="mt-3 text-sm">
+          <p className="font-medium">Guias consultadas</p>
+          <ul className="mt-1 space-y-1">
+            {sources.map((source) => (
+              <li key={source.url}>
+                <a href={source.url} className="text-fd-primary underline underline-offset-4">
+                  {source.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </div>
   );
 }

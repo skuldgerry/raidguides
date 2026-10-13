@@ -15,10 +15,14 @@ function checkInChild(script: string) {
 }
 
 for (const module of ['nanoid', 'nanoid/async']) {
-  test(`${module} zero-size custom generators terminate and ordinary IDs still work`, () => {
+  for (const mode of ['ESM', 'CommonJS']) {
+  test(`${module} (${mode}) zero-size custom generators terminate and ordinary IDs still work`, () => {
     checkInChild(`
       import assert from 'node:assert/strict';
-      import { customAlphabet } from '${module}';
+      ${mode === 'ESM' ? `import { customAlphabet } from '${module}';` : `
+        import { createRequire } from 'node:module';
+        const { customAlphabet } = createRequire(import.meta.url)('${module}');
+      `}
       assert.equal(await customAlphabet('abc', 0)(), '');
       const generate = customAlphabet('abc', 10);
       assert.equal(await generate(0), '');
@@ -26,7 +30,21 @@ for (const module of ['nanoid', 'nanoid/async']) {
       console.log('checks completed');
     `);
   });
+  }
 }
+
+test('nanoid customRandom zero-size calls terminate with an ordinary generator control', () => {
+  checkInChild(`
+    import assert from 'node:assert/strict';
+    import { customRandom } from 'nanoid';
+    const random = (size) => new Uint8Array(size);
+    assert.equal(customRandom('abc', 0, random)(), '');
+    const generate = customRandom('abc', 10, random);
+    assert.equal(generate(0), '');
+    assert.equal(generate(), 'aaaaaaaaaa');
+    console.log('checks completed');
+  `);
+});
 
 test('baseline invalid options throw without terminating the caller', () => {
   checkInChild(`

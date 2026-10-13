@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createOpenRouter } from '@openrouter/ai-sdk-provider';
 import { createUIMessageStreamResponse, streamText, toUIMessageStream } from 'ai';
+import { withRetrievedSources } from '../lib/ai/citations';
 
 test('OpenRouter streams through the installed AI SDK to the chat UI', async () => {
   const requests: Request[] = [];
@@ -28,7 +29,9 @@ test('OpenRouter streams through the installed AI SDK to the chat UI', async () 
     temperature: 0.2,
   });
   const response = createUIMessageStreamResponse({
-    stream: toUIMessageStream({ stream: result.stream }),
+    stream: withRetrievedSources(toUIMessageStream({ stream: result.stream }), [
+      { url: '/docs/gw2/wing-1/vale-guardian', title: 'Vale Guardian' },
+    ]),
   });
   const body = await response.text();
   const events = body.split('\n')
@@ -45,6 +48,7 @@ test('OpenRouter streams through the installed AI SDK to the chat UI', async () 
   assert.equal(response.headers.get('x-vercel-ai-ui-message-stream'), 'v1');
   assert.equal(events.filter((event) => event.type === 'text-delta').map((event) => event.delta).join(''), answer);
   assert.ok(events.some((event) => event.type === 'finish'));
+  assert.ok(events.some((event) => event.type === 'data-sources'));
   assert.ok(!events.some((event) => event.type === 'error'));
 });
 

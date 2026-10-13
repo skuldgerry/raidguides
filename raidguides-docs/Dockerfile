@@ -36,7 +36,9 @@ RUN npm run build
 FROM node:24-alpine AS runner
 WORKDIR /app
 
-RUN addgroup --system --gid 1001 nodejs \
+RUN rm -rf /usr/local/lib/node_modules/npm /opt/yarn-* \
+    && rm -f /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/yarn /usr/local/bin/yarnpkg \
+    && addgroup --system --gid 1001 nodejs \
     && adduser --system --uid 1001 nextjs
 
 # Standalone output contains the minimal server and pruned node_modules.

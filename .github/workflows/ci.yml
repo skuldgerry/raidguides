@@ -1,0 +1,100 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    name: Docs / tests and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: raidguides-docs
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: raidguides-docs/package-lock.json
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Check dependency compatibility
+        run: npm ls ai @ai-sdk/react @openrouter/ai-sdk-provider zod --depth=0
+      - name: Test retrieval and OpenRouter streaming
+        run: npm test
+      - name: Build production documentation (includes TypeScript)
+        run: npm run build
+
+  docker:
+    name: Docker / ${{ matrix.app }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - app: docs
+            context: raidguides-docs
+            port: 3000
+          - app: landing
+            context: raidguides-landing
+            port: 8080
+    env:
+      DOCKER_BUILD_RECORD_UPLOAD: 'false'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: docker/setup-buildx-action@v4
+      - name: Build image locally for checks
+        uses: docker/build-push-action@v7
+        with:
+          context: ./${{ matrix.context }}
+          load: true
+          push: false
+          tags: raidguides-${{ matrix.app }}:ci
+          cache-from: type=gha,scope=${{ matrix.app }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.app }}
+      - name: Check container routes
+        shell: bash
+        env:
+          APP: ${{ matrix.app }}
+          CONTAINER_PORT: ${{ matrix.port }}
+        run: |
+          set -euo pipefail
+          container="raidguides-${APP}-ci"
+          trap 'docker logs "$container"; docker stop "$container" >/dev/null || true' EXIT
+          docker run --detach --rm --name "$container" \
+            -p "127.0.0.1:18080:${CONTAINER_PORT}" "raidguides-${APP}:ci"
+          base="http://127.0.0.1:18080"
+          curl --fail --silent --show-error --retry 20 --retry-connrefused --retry-delay 1 "$base/" -o /tmp/raidguides-home.html
+          if [ "$APP" = docs ]; then
+            curl --fail --silent --show-error "$base/docs/gw2/wing-1/vale-guardian" -o /tmp/raidguides-guide.html
+            grep -q 'Vale Guardian' /tmp/raidguides-guide.html
+            curl --fail --silent --show-error "$base/docs/gw2/wing-1/vale-guardian.md" -o /tmp/raidguides-guide.md
+            grep -q 'Vale Guardian' /tmp/raidguides-guide.md
+            curl --fail --silent --show-error "$base/api/search?query=Vale%20Guardian" -o /tmp/raidguides-search.json
+            grep -q 'Vale Guardian' /tmp/raidguides-search.json
+            status=$(curl --silent --show-error -o /tmp/raidguides-chat.json -w '%{http_code}' \
+              -H 'Content-Type: application/json' -d '{"messages":[]}' "$base/api/chat")
+            test "$status" = 400
+          else
+            docker exec "$container" nginx -t
+            curl --fail --silent --show-error "$base/privacy/" -o /tmp/raidguides-privacy.html
+            grep -q 'Política de Privacidade' /tmp/raidguides-privacy.html
+            curl --fail --silent --show-error "$base/styles.css" -o /tmp/raidguides-styles.css
+            grep -q '.legal-page' /tmp/raidguides-styles.css
+          fi

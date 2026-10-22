@@ -63,11 +63,23 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: ./${{ matrix.context }}
+          pull: true
           load: true
           push: false
           tags: raidguides-${{ matrix.app }}:ci
           cache-from: type=gha,scope=${{ matrix.app }}
           cache-to: type=gha,mode=max,scope=${{ matrix.app }}
+      - name: Check Docs Node runtime
+        if: matrix.app == 'docs'
+        run: |
+          docker run --rm --network none --read-only \
+            --entrypoint node raidguides-docs:ci -e '
+              const [major, minor, patch] = process.versions.node.split(".").map(Number);
+              if (major !== 24 || minor < 22 || (minor === 22 && patch < 1)) {
+                throw new Error(`Expected Node.js >=24.22.1 <25, got ${process.versions.node}`);
+              }
+              console.log(`Node.js ${process.versions.node} satisfies >=24.22.1 <25`);
+            '
       - name: Check container routes
         shell: bash
         env:

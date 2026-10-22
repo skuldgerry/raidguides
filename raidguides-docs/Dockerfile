@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # ---- deps: install dependencies ----
-FROM node:24-alpine AS deps
+FROM node:24.22.1-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
 # --ignore-scripts: the package.json `postinstall` runs `fumadocs-mdx`, which
@@ -10,7 +10,7 @@ COPY package.json package-lock.json* ./
 RUN npm ci --ignore-scripts --no-audit --no-fund
 
 # ---- builder: run fumadocs-mdx + next build ----
-FROM node:24-alpine AS builder
+FROM node:24.22.1-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 
@@ -33,7 +33,7 @@ RUN npm test
 RUN npm run build
 
 # ---- runner: minimal standalone production image ----
-FROM node:24-alpine AS runner
+FROM node:24.22.1-alpine AS runner
 WORKDIR /app
 
 RUN rm -rf /usr/local/lib/node_modules/npm /opt/yarn-* \

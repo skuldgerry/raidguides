@@ -80,6 +80,12 @@ jobs:
               }
               console.log(`Node.js ${process.versions.node} satisfies >=24.22.1 <25`);
             '
+      - name: Check Docs HTTP and chat
+        if: matrix.app == 'docs'
+        run: |
+          docker run --rm --network none --read-only \
+            --volume "$GITHUB_WORKSPACE/raidguides-docs/tests:/fixtures:ro" \
+            --entrypoint node raidguides-docs:ci /fixtures/http-smoke.mjs
       - name: Check container routes
         shell: bash
         env:
